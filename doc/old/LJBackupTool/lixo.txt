@@ -1,0 +1,305 @@
+[LJColligoPersistAllEntries:foo:80] - printing41 events
+eventtime=2005-12-20 17:26:00
+event=From a <a href="http://www-128.ibm.com/developerworks/java/library/j-jtp01274.html">article</a> on developer works.
+<blockquote cite="http://www-128.ibm.com/developerworks/java/library/j-jtp01274.html">
+In HotSpot JVMs (Sun JDK 1.2 and later), things got a lot better -- the
+Sun JDKs moved to a generational collector. Because a copying collector
+is used for the young generation, the free space in the heap is always
+contiguous so that allocation of a new object from the heap can be done
+through a simple pointer addition, as shown in Listing 1. <strong>This makes object allocation in Java applications significantly cheaper than it is in C</strong>,
+a possibility that many developers at first have difficulty imagining.
+Similarly, because copying collectors do not visit dead objects, a heap
+with a large number of temporary objects, which is a common situation
+in Java applications, costs very little to collect; simply trace and
+copy the live objects to a survivor space and reclaim the entire heap
+in one fell swoop. No free lists, no block coalescing, no compacting --
+just wipe the heap clean and start over. So both allocation and
+deallocation costs per object went way down in JDK 1.2. </blockquote>
+
+subject=How expensive is allocation?
+itemid=71
+anum=139
+url=http://bpfurtado.livejournal.com/18315.html
+props={taglist=java, garbage_collector, memory_management, c, revnum=3, revtime=1183323170, opt_preformatted=1}
+eventtime=2006-07-28 13:29:00
+event=<P>From <A href="http://dot.kde.org/">KDE.news</A>: <A href="http://dot.kde.org/1154086784/">Trolltech Releases Preview of Qt for Java</A>, it's called <A href="http://www.trolltech.com/developer/downloads/qt/qtjambi-techpreview">Jambi</A>.</P>
+subject=Qt for Java
+itemid=111
+anum=234
+url=http://bpfurtado.livejournal.com/28650.html
+props={taglist=jambi, java, kde, qt, revnum=1, revtime=1172436054}
+eventtime=2006-12-04 07:02:00
+event=<p> I'm on linux this morning, or GNU/Linux if you like saying things right ;) So I've came upon <a href="http://akregator.kde.org/">akregator</a> which led me to <a href="/media/windows/Documents and Settings/bfurtado/.jedit/macro">KDE Dot News</a>, more precisely to a post of 25/Oct/2006 entitled <a href="http://dot.kde.org/1161821085/"><q>SQO-OSS Project Launched with KDE</q></a>. </p>  <p> <a href="http://www.sqo-oss.eu/">SQO-OSS</a>  seems to be a independent organization that provides several reports based on <i>source code metrics</i> and <i>communication among developers (like bug reports and mailing list discussions)</i> to free &amp; open source projects like <a href="http://kde.org">KDE</a>. They want this reports and charts to be used in favor of these projects when compared with its closed source counterparts. On the date of the post they decided to include KDE in its portfolio.   </p>  <p> </p><blockquote> For developers the results based on code analysis are immediately useful. Within KDE we have experience with the <a href="http://www.englishbreakfastnetwork.org/">EBN</a> and the fixes that come out of there (some more useful than others, granted). </blockquote> <p>&nbsp;</p>
+subject=Independent quality reports on Open Source world
+itemid=142
+anum=144
+url=http://bpfurtado.livejournal.com/36496.html
+props={taglist=kde, linux, open_source, used_rte=1, opt_preformatted=1}
+eventtime=2006-12-13 09:21:00
+event=<a href="http://en.opensuse.org/Kickoff">Kickoff</a>: a new KDE start menu <a href="http://home.kde.org/~binner/kickoff/sneak_preview.html">(video)</a>. <br />I just love drag &amp; drops, smart searches (integrated with desktop search), sliding panes, <i>et cetera</i> :)<br /><br /><i>Don't get me wrong, I do like windows XP start menu, the windows I use at work is an old windows 2k, and I miss a lot some features the start menu at XP has, like fast access to My Documents folder and other shortcuts.</i>
+subject=A kick at the windows start menu.
+itemid=143
+anum=114
+url=http://bpfurtado.livejournal.com/36722.html
+props={taglist=kde, video, windows, used_rte=1, opt_preformatted=1}
+eventtime=2007-01-02 12:18:00
+event=Some weeks ago my wife bought a iPod, we had at the time only a windows laptop without permissions to install new apps, so I started looking for a portable version of iTunes.<br /><br />In the course of the search I've came across this 2 suites:<br /><ul><li><a href="http://portableapps.com/ ">Portable apps</a>, free, only with free software;</li><li><a href="http://www.mojopac.com">Mojopac</a>, paid, with lots of applications.</li></ul>As I did not want to pay for mojopac I was restricted to portable apps, which had not iTunes, but even so this project was a nice discovery :)
+subject=Portable apps - flash drivers, iPods, etc
+itemid=144
+anum=250
+url=http://bpfurtado.livejournal.com/37114.html
+props={taglist=portable, ipod, commentalter=1167879276, revnum=1, used_rte=1, revtime=1167751391, opt_preformatted=1}
+eventtime=2007-01-03 23:20:00
+event=Even wandered how to center em floating element in CSS?<br />  <code>margin: 0 auto 0 auto; </code><br />  <br /> Don't know why your Javascript code <code>document.getElementById('aAnchorId')</code> does not work?<br />  <i>Because getElementById simply doesn't look into the anchors objects.</i><br /><br />More about it <a href="http://www.howtocreate.co.uk/tutorials/javascript/elementcontents">here</a>.  <blockquote>The only thing it cannot reference is a link object, because by their nature, link objects are only accessible using their numerical index. </blockquote>
+subject=Tips: CSS float center & JS get anchor by id
+itemid=145
+anum=211
+url=http://bpfurtado.livejournal.com/37331.html
+props={taglist=javascript, css, html, commentalter=1169211669, used_rte=1, opt_preformatted=1}
+eventtime=2007-02-20 17:53:00
+event=Google is now warning about web pages that will harm your computer. Interesting. Try looking for some serial code ;)
+subject=This site may harm your computer
+itemid=146
+anum=167
+url=http://bpfurtado.livejournal.com/37543.html
+props={taglist=google, web, used_rte=1}
+eventtime=2007-02-24 14:33:00
+event=[B@d42d08
+subject=No ODF (OASIS) nor OOXML (M$), welcome good old HTML+CSS
+itemid=147
+anum=66
+url=http://bpfurtado.livejournal.com/37698.html
+props={taglist=css, microsoft, slashdot, open_office, opera, html, standards, revnum=3, used_rte=1, current_music=Dance music from my new neighbours, revtime=1172348777, opt_preformatted=1, current_location=Machu Picchu, Peru, current_moodid=101}
+eventtime=2007-02-24 18:16:00
+event=Google goes enterprise with <a href="http://www.google.com/a/">Google apps</a>.<br /><br /><img src="http://www.google.com/a/help/intl/en/images/enterprise.gif" alt="" />
+subject=Google goes enterprise
+itemid=148
+anum=133
+url=http://bpfurtado.livejournal.com/38021.html
+props={taglist=enterprise, google, office, used_rte=1, opt_preformatted=1, current_moodid=114}
+eventtime=2007-02-25 12:10:00
+event=From <a href="http://slashdot.org">/.</a>: <a href="http://hardware.slashdot.org/article.pl?sid=07/02/24/185213">XP On 8-MHz Pentium With 20 MB RAM</a>.<br /><br />The <a href="http://hardware.slashdot.org/comments.pl?sid=224004&amp;threshold=1&amp;commentsort=0&amp;mode=thread&amp;pid=18140636#18140768">best reply</a> I read:<br /><blockquote><br />&gt; Isn't this against the Geneva conventions?<br /><br />Sadly, computers don't have rights, so moral arguments aside, I'm afraid it's quite legal to run Windows on them.<br /></blockquote><br />
+subject=Does old computers deserve mercy?
+itemid=149
+anum=58
+url=http://bpfurtado.livejournal.com/38202.html
+props={taglist=fun, slashdot, windows, revnum=1, used_rte=1, revtime=1172413027, opt_preformatted=1, current_moodid=44}
+eventtime=2007-02-25 18:19:00
+event=[B@958bb8
+subject=Jambi preview
+itemid=150
+anum=138
+url=http://bpfurtado.livejournal.com/38538.html
+props={taglist=jambi, java, kde, qt, swing, revnum=1, used_rte=1, revtime=1172436130, opt_preformatted=1}
+eventtime=2007-03-14 13:57:00
+event=This <a href="http://www.artima.com/forums/flat.jsp?forum=106&amp;thread=197511&amp;start=15&amp;msRange=15">blog entry</a> at <a href="http://www.artima.com">Artima</a> shows some <i>Pain Points</i> in C# from their users:  <p> These are the replies I found most interesting: </p>  <blockquote>     <b>I am more concerned that MS keeps stomping over very excellent .NET open source projects.</b>     Half of LINQ really should be NHibernate. NDoc died and microsoft failed to replace it. NUnit should have just been adopted by MS, but instead there is MSTest garbage from Team Suite. And the Enterprise Application Library stuff is really just second rate garbage compared to Castle Project. </blockquote>  <blockquote>     Not having the possibility to declare a variable as constant inside a method is probably what I miss the most from Java.<br />     Sure you have const, but it does not work on instances and readonly can only be used on member variables. Maybe I'm just missing out on something, but until someone enlights me, I find this annoying. </blockquote>  <blockquote>     <ul>     <li>Visual Studio...*shudder* Even with Resharper, it's only just bearable.</li>     <li>No instance-inner classes - sometimes you want more than a single method (anon delegate).</li>     <li>Looks like enums have to be integer types - I like the way Java enums are property types and implement        interfaces.</li>     <li>no equiv of java.util.Set</li>     </ul> </blockquote>  <blockquote>     List, IList, ICollection, Collection etc... these don't align with their more traditional definitions. It would be nicer if they corresponded to the collection classes in java a little bit more obviously. </blockquote>  <blockquote>     With C# (standard style), things are a bit mixed up. Namespaces, types, methods and properties tend to all start with an upper case letter. Accessors/getters may be hidden by a property.<br />     <br />     <b>Of course, a good IDE will show you all these in different styles and colours too, but VS2005 (shudder)</b> doesn't. Maybe the new VS, but I haven't tried it. </blockquote>  <blockquote> When interop with Win32 / COM isn't main-road-paved, it's ugly and complex. </blockquote>
+subject=C# Pain Points
+itemid=151
+anum=120
+url=http://bpfurtado.livejournal.com/38776.html
+props={taglist=blog, java, artima, c#, used_rte=1, current_music=finger at keyboards, opt_preformatted=1, current_location=Sub-atomic reality, current_moodid=70}
+eventtime=2007-03-18 19:51:00
+event=I'm activating again my desktop (I've being using my wife's machine since we've got married one year ago) in the last days, basically making some backups, from the kubuntu partition, from the winXP partition, data partitions, et cetera. To after all that install just Kubuntu and try again to live only with a linux distro at home :)<br/><br/>My motivation to do such a change was that my computer was presenting some strange behavior the last weeks I had used it, like deciding booting by itself, Kubuntu was reporting some Hard Disk errors on start up and bad things like that.<br/><br/>My problem began when I decided to reset my master boot record in order to have grub to be gonne. I've created my Partition Magic (old version 8.0) rescue disks and booted. To my surprise the <code>fdisk /mbr</code> did not work and complained about not being capable of save my current partition info in order to change to a new one. Well, I don't know why I decided to set my first partition to be bootable (it was already but I thought it couldn't make any damage...)<br/><br/>After that my first partition, the one with all my computer life since I was a teenager building little Clipper frankensteins, was gonne! The Kubuntu live CD was not booting anymore, and I was lost. <br/><br/>My first idea was to look at wikipedia's page about <a href="http://en.wikipedia.org/wiki/Fdisk">fdisk</a>, which led me to the wonderful free tool called <a href="http://www.cgsecurity.org/wiki/TestDisk">TestDisk</a>. On its web site I found a link to another gift from the GNU/Linux community, the <a href="http://gparted.sourceforge.net/livecd.php">GParted Live CD</a>.<blockquote><a href="http://www.cgsecurity.org/wiki/TestDisk">TestDisk</a> is a powerful free data recovery software! It was primarily designed to help <span style="font-weight: bold;">recover lost partitions and/or make non-booting disks bootable again</span> when these symptoms are caused by faulty software, certain types of viruses or human error (such as accidentally deleting your Partition Table). Partition table recovery using TestDisk is really easy.</blockquote>To resume, I've booted with the GParted  live cd, openned a shell and used the <code>testdisk</code> utility to recover my lost partitions and it worked like a sharp <a href="http://en.wikipedia.org/wiki/Katana">Katana</a> slicing some puddin =)<br/><br/>A happy end to all my arcane files, thanks TestDisk, GParted Live CD project and Wikipedia!<br/><br/><div style="text-align: right;"><img alt="testdisk logo" src="http://www.cgsecurity.org/testdisk_doc/testdisklogo2.gif"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;        <img alt="gnome logo" src="http://gparted.sourceforge.net/images/gnome-64.png"/></div>
+subject=Saved by free software!
+itemid=152
+anum=239
+url=http://bpfurtado.livejournal.com/39151.html
+props={taglist=gparted, partition, boot, utilities, kubuntu, commentalter=1174340168, used_rte=1, opt_preformatted=1, current_moodid=15}
+eventtime=2007-04-11 10:15:00
+event=Just type <a href="http://www.google.com/talk/">gtalk</a> in your Firefox address bar and click the blue "launch" button :)<br /><br />The interesting fact is that it <b>really replaces</b> the binary version of gtalk, it's not something like the chat inside the gmail, it's gtalk <span style="font-style: italic;">as is</span>, no install, easy to use and with a simple and elegant interface.<br /><br /><img src="http://www.google.com/talk/images/talk_logo.gif" alt="gtalk logo" />
+subject=Talk on web 2.0
+itemid=153
+anum=230
+url=http://bpfurtado.livejournal.com/39398.html
+props={taglist=google, web2.0, commentalter=1176325889, revnum=1, used_rte=1, revtime=1176308711, opt_preformatted=1}
+eventtime=2007-04-12 10:39:00
+event=It's quite common to meet software developers who actually think that the difference between 2 programming languages are only their syntax.<br /> <br /> My first contact with a opposite opinion, strongly firmed on good arguments and examples, was reading [<a href="http://www.mindview.net/Books/TIJ/">Thinking in Java</a>] in the third year of my graduation course. As the name says already, the book is about not only java syntax and vocabulary but with a paramount emphasis on the Usage of Java, the unofficial idioms used by its community founders.<br /> <br /> In my years of software development unfortunately I've came to know that most developers simply ignore this, and try to code in Java like they do in C++, or in Python like they do in Java, etc.<br /> <br /> Not only people ignore this but when you talk to then about the need of studying how to "Think" in some language they simply don't value your advice. Well, on time, they will know that, but till then much code will be oddly written and that's what motivates this post.<br /> <br /> To my surprise today, while waiting my <i>light-speed</i> machine to boot, I was reading the foreword of [<a href="http://java.sun.com/docs/books/effective/">Effective Java</a>, <a href="http://en.wikipedia.org/wiki/Joshua_Bloch">Joshua Bloch</a>] written by <a href="http://en.wikipedia.org/wiki/Guy_L._Steele,_Jr.">Guy Steele</a>  (yeah, the LISP guy ;). In this foreword Steele wisely describes this very problem of most books focusing only on <b>Grammar and Vocabulary and *not* Usage</b> and shows a good parallel with the learning of spoken languages.<br /> <br /> It was very pleasant to see this flag raised not only by <a href="http://en.wikipedia.org/wiki/Bruce_Eckel">Bruce Eckel</a> (author of the best Java book Thinking in Java) but also by another great computer scientist like Guy Steele.<br />  <br /> Now if you don't agree with me, the reputation of both above authors might be a stronger influence you to give this idea some <i>thinking</i> ;)<br /> <br /> When learning a new language look for the source code of a well established project, the language syntax and APIs will also be there and with a good change alongside with the good practices.<br /> <br /> By the way, [Effective Java] it's just about <a href="http://java.sun.com">Java</a> good idioms.
+subject="Thinking" vs. "Typing" in Programming Languages
+itemid=154
+anum=206
+url=http://bpfurtado.livejournal.com/39630.html
+props={taglist=java, programming_language, commentalter=1176519661, revnum=1, used_rte=1, revtime=1176434178, opt_preformatted=1, current_moodid=64}
+eventtime=2007-04-13 10:35:00
+event=In addition to Bruck Eckel and Guy Steele, now <span class="dkcaption1">Brian Goetz talks on the </span>Sun Developer Network: "<a href="http://java.sun.com/developer/technicalArticles/Interviews/goetz_qa.html?feed=JSC">Writing Better Code</a>: A Conversation With Sun Microsystems Technology Evangelist Brian Goetz".<br /><blockquote>I try to convince them that by relinquishing some control, they'll get huge productivity and reliability benefits -- and maybe even better performance as well. Some programmers see the trade-off and think it's great, while others resist it and <b>code Java programs as if they were coding in C, thereby getting the benefits of neither.<font size="4"> The Java language is not just a syntax: There's a design philosophy that goes with managed languages</font>.</b> To get the benefit of Java programming, you have to understand that you are not just programming in C with a different syntax.<br /></blockquote>To collaborate to my last post: <a href="http://bpfurtado.livejournal.com/2007/04/12/">"Thinking" vs. "Typing" in Programming Languages</a>.
+subject="Thinking" vs. "Typing" 2
+itemid=155
+anum=222
+url=http://bpfurtado.livejournal.com/39902.html
+props={taglist=java, programming_language, used_rte=1, opt_preformatted=1}
+eventtime=2007-04-20 10:06:00
+event=From <a href="http://www.artima.com">Artima</a>, stil gotta read it and write my thoughts, no time for this now (changing from one company to another, looots of stuff to do ;)<br /> <br /> <a href="http://www.artima.com/weblogs/viewpost.jsp?thread=202004"><b>Comparing Inner Class/Closure Proposals</b></a><br /> <blockquote> There are at least 4 inner class/closure proposals for Java 7 and it is hard to compare them because they use different terms and different syntax for similar concepts. This post makes the comparison easier by separating concerns. </blockquote>
+subject=Clipping: Comparing Inner Class/Closure Proposals
+itemid=156
+anum=211
+url=http://bpfurtado.livejournal.com/40147.html
+props={taglist=closures, java, programming_language, java_changes, used_rte=1, opt_preformatted=1, current_moodid=91}
+eventtime=2007-04-20 13:38:00
+event=[B@5e1077
+subject=Keep Java simple and elegant... fear of the new?
+itemid=157
+anum=90
+url=http://bpfurtado.livejournal.com/40282.html
+props={taglist=java, adobe, sun, flex, programming_language, tss, java_changes, c++, commentalter=1191346709, revnum=2, revtime=1177089165, opt_preformatted=1, hasscreened=1}
+eventtime=2007-04-23 22:17:00
+event=Network effects, gigantic voice databases, web2.0 is not about Ajax... <span id="misp_compose_1" class="hm">Interesting... My highlights on</span>:<br /> <br /> <a href="http://www.wired.com/techbiz/people/news/2007/04/timoreilly_0413"><span style="font-weight: bold;">Tim <span id="misp_compose_2" class="hm">O'Reilly</span>: Web 2.0 Is About Controlling Data</span></a><br />   <p style="margin-left: 40px; font-weight: bold;">Why did <font size="4"><span style="background-color: rgb(255, 255, 153);">Google</span></font>, for example, recently decide to offer <span style="background-color: rgb(255, 255, 51);">free 411 service</span>? I haven't talked to people at Google, but it's pretty clear to me why. It's because of speech recognition. It has nothing to do with 411 service, it has to do with <span style="background-color: rgb(255, 255, 153);">getting a database of voices</span>, so they don't have to license speech technology from Nuance or someone else. They want their own data stream.</p> <p style="margin-left: 40px; font-weight: bold;">...</p> <p style="margin-left: 40px;"><b><span id="misp_compose_3" class="hm">WN</span></b>: So you think that (control of data) is actually more characteristic of web 2.0 than social networking or Ajax (asynchronous JavaScript and XML) interfaces?</p>   <p style="margin-left: 40px;"><b><span id="misp_compose_4" class="hm">O'Reilly</span></b>: Absolutely. <font size="4"><span style="background-color: rgb(255, 255, 153); font-weight: bold;">Anybody who thinks that this is about Ajax is completely missing the boat.</span></font></p> <p style="margin-left: 40px;">I do think building rich Internet applications is an important part of web 2.0. I don't want to dismiss it, because we are able to build richer application platforms today. But <span style="font-weight: bold;">it's ultimately about network effects</span>, and where do you build services that get better the more people use them? And it's also about<span style="font-weight: bold;"> the databases that get created as a result of those network effects</span>.</p> <div style="margin-left: 40px;">We're still trying to move people toward really understanding what that new world looks like. I don't think a lot of people are there. <span style="font-weight: bold;">A lot of people still think, "Oh, it's about social networking. It's about blogging. It's about wikis." I think <font size="4" style="background-color: rgb(255, 255, 153);">it's about the data</font></span> that's created by those mechanisms, and the businesses that that data will make possible.<br /> <br /> </div>And about our loved <a href="http://slashdot.org">./</a>:<br /> <div style="margin-left: 40px;"><br /> No, what I'd really like, and what I'm going to work for, is to get some better moderation mechanisms. One of the things <font size="4"><span style="background-color: rgb(255, 255, 153);">Slashdot says is to focus on moderating up, not moderating down</span></font>. Promote the good (comments),<br /><br /></div>
+subject=Clipping: web2.0 is not about Ajax
+itemid=158
+anum=168
+url=http://bpfurtado.livejournal.com/40616.html
+props={taglist=ajax, clipping, google, web2.0, slashdot, revnum=1, used_rte=1, revtime=1177377926, opt_preformatted=1, current_moodid=125}
+eventtime=2007-05-15 08:04:00
+event=<span id="intelliTXT">Sun's Java implementation goes GPL (<a href="http://www.eweek.com/article2/0,1895,2127462,00.asp">read more</a>).<br /></span><blockquote><span id="intelliTXT">"Sun Microsystems has announced the release of an open-source version of its Java Development Kit for Java Platform Standard Edition, the systems company and Java giant also <b>announced a new competitor to Adobe's Flash and Microsoft's Silverlight, as well as a new mobile initiative</b>."</span><br /><span id="intelliTXT"></span><br /><span id="intelliTXT"></span><span id="intelliTXT">"Sun has contributed the software to the OpenJDK Community as free software under the <b>GNU GPLv2</b> "</span><br /><span id="intelliTXT"></span><br /><span id="intelliTXT"></span><span id="intelliTXT">"Now the <b>free and open-source</b> community has access to Java Platform <b>Standard</b> Edition, <b>Enterprise</b> Edition and <b>Micro</b> Edition as free software under the GPL. We look forward to working with the Java community and the free and open-source communities to determine the future of Java technology."</span><br /><span id="intelliTXT"></span></blockquote><span id="intelliTXT"><a href="http://java.sun.com/javafx/">Java FX</a>, a new competitor to Adobe Flash? Here they only talk about the Mobile platform, but as I could try using a <a href="http://download.java.net/general/openjfx/demos/javafxpad.jnlp">Java Web Start link</a> this new script language will be used on the desktop side too. <a href="https://openjfx.dev.java.net/#demos">More demos here</a>.<br /></span><blockquote><span id="intelliTXT">"Lastly, Java FX Script is a scripting language focused on content authors and others in the creative crowd, Green said. "It is designed to <b>deliver visually impactful, dramatically improved Web</b> <b>and network-facing experiences</b> that run from Java SE all the way down to devices running Java FX Mobile."</span><br /><span id="intelliTXT"></span><br /><span id="intelliTXT"></span><span id="intelliTXT">Indeed, "Java FX is essentially a great opportunity for developers to write apps for mobile devices, battery powered devices, using the computing power of Java SE," Green said. "<b>We're finally at a point where the core Java SE capabilities are brought all the way from the desktop down to mobile devices</b>."<br /></span></blockquote><br /><div style="text-align: right;"><img src="http://java.sun.com/javafx/images/l2_javafxtransparency.gif" alt="javafx script screenshot" />  <img src="http://upload.wikimedia.org/wikipedia/commons/thumb/2/22/Heckert_GNU_white.svg/180px-Heckert_GNU_white.svg.png" alt="GNU logo" />&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <br /></div>
+subject=Sun's Java GPLed and Java FX
+itemid=159
+anum=168
+url=http://bpfurtado.livejournal.com/40872.html
+props={taglist=flash, java, gpl, adobe, sun, javafx, gnu, revnum=2, used_rte=1, revtime=1179230121, opt_preformatted=1}
+eventtime=2007-05-22 13:57:00
+event=Finally, the Internet (<a href="http://books.google.com/">Google Book Search</a>) offers the so promised <a href="http://books.google.com/books?id=cyokAAAAMAAJ&amp;pgis=1"><i>on line</i> libraries</a>. <br /><blockquote>Now when you search you'll get both digitized book results as well as records for millions of other books that still just exist in the analog world.</blockquote><a href="http://googleblog.blogspot.com/2007/05/google-book-search-becomes-more.html">Book Search becomes more comprehensive</a>: <br /><blockquote>When you view these new added book records, you can often <span style="font-weight: bold;">read reviews, a summary, or see what other people had to say about the book around the web</span>. Since these books haven't been digitally indexed yet, you can't preview the text online, but if you've discovered something great, we offer links to buy the book or find it in a library near you.</blockquote>I remember in the early days of the WWW the promise of Museums, Libraries and all human knowledge equally distributed to the W. Of course that was <span style="font-style: italic;">romantic marketing</span> only, the nations will always compete and hide the true knowledge each one has, but now at least inoffensive books can be easily searched =)<br /><br />A special mention to the section "Places mentioned in this book" for example in the <a href="http://books.google.com/books?id=cyokAAAAMAAJ&amp;pgis=1">Moby Dick book</a> (using google maps, of course). It's impressive, you click on the place and it says in which page the place was mentioned in the book.<br /><br /><img src="http://tbn0.google.com/images?q=tbn:h6wghqRLs3CzEM:http://www.oralchelation.net/images/bs00554_.jpg" alt="books" />
+subject=The promise of on line libraries fulfilled?
+itemid=160
+anum=196
+url=http://bpfurtado.livejournal.com/41156.html
+props={taglist=google, book, google_maps, revnum=3, used_rte=1, revtime=1179854574, opt_preformatted=1}
+eventtime=2007-05-23 15:07:00
+event=As I <a href="http://bpfurtado.livejournal.com/40282.html">quoted</a> Yakov here before: If you would like to add Java pyrotechnic new features, consider letting Java doing its fantastic job where it is and give life to your ideas in a new language, and better yet, a language with a compiler to java bytecode, that's what Scala folks did! <blockquote> Scala is a statically typed, object-oriented programming language that blends imperative and functional programming styles. Scala is designed to integrate easily with applications that run on modern virtual machines, primarily the Java virtual machine (JVM). <span style="font-weight: bold;">The main Scala compiler, scalac, generates Java class files</span> that can be run on the JVM. </blockquote> <blockquote> Scala was developed starting in 2003 by Martin Odersky's group at EPFL, Lausanne, Switzerland. Previously, Martin had been active in the Java field. He co-designed the first version of Java generics and was the original author of the current javac compiler. <span style="font-weight: bold;">The work on Scala was motivated by the desire to overcome limitations imposed by backwards compatibility with Java. So Scala is not a superset of Java, but it retains seamless interoperability</span>. </blockquote> <blockquote><span style="font-weight: bold;"> One reason you might want to use Scala is that it allows you to increase your productivity compared to Java while leveraging JVM execution speed, your existing investments in Java code, knowledge, and the vast array of APIs available for the JVM.</span> <span style="color: rgb(128, 0, 0); font-weight: bold;">It has the conciseness of a dynamic language like Ruby or Python</span>, <span style="text-decoration: underline;">but it is statically typed, like Java</span>. Another reason is that Scala comes with an Erlang-like Actors library that greatly simplifies concurrent programming, but runs on the JVM. </blockquote> From <a href="http://www.artima.com/scalazine/articles/steps.html">First steps to Scala</a>.
+subject=Keep Java language simple, use its sophisticated VM as a platform
+itemid=161
+anum=18
+url=http://bpfurtado.livejournal.com/41234.html
+props={taglist=java, scala, java_changes, compiler, erlang, commentalter=1194098880, revnum=2, revtime=1180201316, opt_preformatted=1}
+eventtime=2007-05-27 21:29:00
+event=Quick good news on <a href="http://sun.com/javafx/">JavaFX</a>, from <a href="http://www.oreillynet.com">OnJava</a>:<ul><li>"<span style="font-weight: bold;">it is perfectly fine to distribute your JavaFX applications, in fact we encourage it</span>";</li><li>"Yes, it is and the runtime <span style="font-weight: bold;">will be open sourced</span>";</li><li><a href="http://www.reportmill.com/jfx/">A Java FX WYSIWYG</a>;</li></ul> <blockquote> A new scripting language, JavaFX Script gives Java developers the power to quickly create content-rich applications for the widest <span style="font-weight: bold;">variety of clients, including mobile devices, set-top boxes, desktops, even Blu-ray discs</span>. Content creators now have a simple way to develop content for any Java Powered consumer device. </blockquote> <blockquote> Consumers are looking for exciting, dynamic content on the Web and expecting a more interactive experience with Web services.<span style="font-weight: bold;"> JavaFX can help you deliver visually compelling applications, such as maps and mashups, video, audio, and pictures</span>, that you can standardize across cell phones, TVs, and more. </blockquote> <blockquote>... JavaFX Script will appeal to content authors because the structure of the <span style="font-weight: bold;">written code closely matches the actual layout of the GUI ...</span> </blockquote>
+subject=JavaFX quick good news
+itemid=162
+anum=228
+url=http://bpfurtado.livejournal.com/41700.html
+props={taglist=java, javafx, web, used_rte=1, opt_preformatted=1}
+eventtime=2007-05-29 22:14:00
+event=<a href="http://googleblog.blogspot.com/2007/05/whats-hot-today.html">Google blog</a> clipping: <a href="http://www.google.com/trends/hottrends">Hot Trends</a>!<br /><blockquote>And today we're introducing a new toy we are calling Hot Trends. It's a new feature of Google Trends for sharing the the hottest current searches with you in very close to real time. <font size="4"><span style="font-weight: bold;">What's on our <a href="http://www.google.com/trends/hottrends">collective mind</a> as we search for information?</span></font> <span style="font-weight: bold;">What's interesting to people right now? Hot Trends will tell you</span>. At a glance, you'll see the huge variety of topics capturing our attention, from current events to daily crossword puzzle clues to the latest celebrity gossip. Hot Trends is updated throughout the day, so check back often.</blockquote> <blockquote>Hot Trends aren't the search terms people look for most often -- those are pretty predictable, like [weather] or [games] or perhaps [myspace]. Yes, [sex] too. Instead, the Hot Trends algorithm analyzes millions of searches <span style="font-weight: bold;">to find those that are deviating the most relative to their past traffic</span>. And the outcome is the Hot Trends list.</blockquote>
+subject=the collective (connected) mind...
+itemid=163
+anum=197
+url=http://bpfurtado.livejournal.com/41925.html
+props={taglist=clipping, blog, google, search, revnum=2, used_rte=1, revtime=1180531822, opt_preformatted=1}
+eventtime=2007-06-14 07:40:00
+event=A very <a href="http://www.artima.com/weblogs/viewpost.jsp?thread=207783">interesting post</a> about Jini and Bounjour: <blockquote>The key point of Mossberg's column was that iTunes may be a fine music player and music organizer, and an excellent vehicle to deliver users to Apple's online music store, but that there is a bigger point to consider, too: <span style="font-weight: bold;">each installation of iTunes also installs Apple's Bonjour software</span>, making the host machine an instant and potential participant on a Bonjour, or ZeroConf, dynamic network. </blockquote><blockquote>As Bonjour inventor Stuart Cheshire demonstrated in an hour-long Google TechTalk presentation (Flash video), Bonjour can be used to advertise and discover networked services over the WAN as well. This can be accomplished by adding extra bits of data to a host's DNS record. In this way, <span style="font-weight: bold;">iTunes, Safari, or any other Bonjour-friendly program, can discover and use services that reside on other Internet hosts</span>. </blockquote> <blockquote>In contrast to Jini's reliance on Java and code mobility, <span style="font-weight: bold;">Bonjour simply extends the existing DNS mechanisms</span>, and uses a service's protocol type, defined as a string, in service discovery. </blockquote><blockquote style="font-weight: bold;">The beauty of the Jini vision was all kinds of devices and software discovering and communicating with one another, making networked services seamlessly useable by anyone.</blockquote><div style="float: right; margin-right: 2em;"><img alt="Bonjour logo" src="http://upload.wikimedia.org/wikipedia/en/thumb/9/9f/Apple_Bonjour_Logo.png/128px-Apple_Bonjour_Logo.png" /><img src="http://www.jini.org/w/images/jini-clr-small.gif" alt="Jini logo" /></div>
+subject=Bounjour vs. Jini
+itemid=164
+anum=206
+url=http://bpfurtado.livejournal.com/42190.html
+props={taglist=apple, java, bonjour, jini, artima, itunes, commentalter=1182179123, revnum=1, used_rte=1, revtime=1181841515, opt_preformatted=1}
+eventtime=2007-06-21 11:38:00
+event=Welcome <a href="http://jude.change-vision.com/jude-web/index.html">JUDE</a>! The best UML tool for actually <span style="font-weight: bold;">drawing </span>diagrams without getting in your way!<br /><blockquote>SEA Tecnologia is a distributor of JUDE/Professional in Brazil.<br />If you are interested in Portuguese version of JUDE/Professional,<br />please feel free to contact them at any time!<br /><br />- SEA Tecnologia : <a target="_blank" href="http://www.seatecnologia.com.br/" onclick="return top.js.OpenExtLink(window,event,this)">http://www.seatecnologia.com<wbr></wbr>.br</a><br /></blockquote>
+subject=JUDE in Brazil
+itemid=165
+anum=177
+url=http://bpfurtado.livejournal.com/42417.html
+props={taglist=jude, uml, brazil, revnum=1, used_rte=1, revtime=1182538819, opt_preformatted=1}
+eventtime=2007-06-22 18:28:00
+event=From a <a href="http://www.artima.com/weblogs/viewpost.jsp?thread=208549">Guido post</a>:<blockquote><span style="text-decoration: underline;">Unicode, Codecs and I/O</span><br /><span style="font-weight: bold;"> We're switching to a model known from Java: (immutable) text strings are Unicode, and binary data is represented by a separate mutable "bytes" data type.</span></blockquote><blockquote>We are adopting a slightly different approach to codecs: while in Python 2, codecs can accept either Unicode or 8-bits as input and produce either as output, <span style="font-weight: bold;">in Py3k, encoding is always a translation from a Unicode (text) string to an array of bytes, and decoding always goes the opposite direction.</span></blockquote><blockquote><span style="text-decoration: underline;">New I/O Library</span><br />The I/O library is also changing in response to these changes. I wanted to rewrite it anyway, to remove the dependency on the C stdio library. The new distinction between bytes and text strings required a (subtle) change in API, and the two projects were undertaken hand in hand. In the new library, <span style="font-weight: bold;">there is a clear distinction between binary streams (opened with a mode like "rb" or "wb") and text streams (opened with a mode not containing "b").</span> Text streams have a new attribute, the encoding, which can be set explicitly when the stream is opened; if no encoding is specified, a system-specific default is used (which might use guessing when an existing file is being opened).</blockquote>Above the binary streams versus the text streams are very similiar to java.io.Reader/Writer's and Input/Output Streams, which are several years old by now ;)<br /><blockquote><span style="font-weight: bold;">Read operations on binary streams return bytes arrays, while read operations on text streams return (Unicode) text strings;</span> and similar for write operations. Writing a text string to a binary stream or a bytes array to a text stream will raise an exception.</blockquote>
+subject=Python3000 takes inspiration on Java
+itemid=166
+anum=72
+url=http://bpfurtado.livejournal.com/42568.html
+props={taglist=java, python, unicode, io, used_rte=1, opt_preformatted=1}
+eventtime=2007-08-24 10:41:00
+event=[B@76fba0
+subject=SUNW to JAVA
+itemid=167
+anum=100
+url=http://bpfurtado.livejournal.com/42852.html
+props={taglist=java, sun, slashdot, commentalter=1188468840, revnum=1, used_rte=1, revtime=1187963325, opt_preformatted=1}
+eventtime=2007-09-20 10:55:00
+event=[B@1175422
+subject={Sun+Intel} JavaVM on multicore processors
+itemid=168
+anum=50
+url=http://bpfurtado.livejournal.com/43058.html
+props={taglist=java, intel, sun, jvm, used_rte=1, opt_preformatted=1}
+eventtime=2007-09-26 21:43:00
+event=Joel has <a href="http://www.joelonsoftware.com/items/2007/09/26b.html">a good theory</a> (<i>based on his experience on leading the very own M$ Excel team</i>) about this famous Excel bug being reported recently.<br /><br />He basically says this bug is just about <b>printing</b> a very small set of numbers,  derived calculations based on those are still returning right results.<br /><blockquote>Somewhere inside Excel is a function that converts binary numbers to strings for displaying. This is the code that has the bug that causes a few numbers which are <i>extremely close</i> to 65,535 to be formatted incorrectly as 100,000.<br /><br /> <b>If you use the number further along in calculations, for example, if you add 2 to the results, you'll get the right thing.</b><br /></blockquote>
+subject=Joel on the Excel bug
+itemid=169
+anum=61
+url=http://bpfurtado.livejournal.com/43325.html
+props={taglist=joel, excel, microsoft, revnum=3, used_rte=1, revtime=1190859861, opt_preformatted=1, current_location=home, current_moodid=28}
+eventtime=2007-09-28 21:04:00
+event=I just had to post this here. How people have such wrong ideas... <br />The reply is not much elaborated because I did not think at first in showing it here.<br /><br />From <a href="http://groups.google.com/group/comp.lang.ruby/browse_frm/thread/55841290acdc1aa6?hl=en">a Ruby discussion group</a>: <blockquote>     <p>On Sep 27, 7:29 pm, MenTaLguY &lt;men...@rydia.net&gt; wrote:</p>     <pre>    &gt; On Fri, 28 Sep 2007 06:31:47 +0900, "Rick DeNatale" &lt;rick.denat...@gmail.com&gt; wrote:<br />    &gt; &gt; Most of the GOF book deals with the issues raised by statically<br />    &gt; &gt; typed oo languages, and aren't as portable as one might think.<br />    </pre> </blockquote> <i>My reply:</i> <blockquote><p> You couldn't be more wrong, being statically typed does not interfere in the runtime messages exchange between your objects. </p> <p> Design Pattern or better saying Object Oriented Modeling is just about how to <b>better model the communication of your objects</b> in order to get more <b>reusable</b> and <b>maintainable</b> code. </p>  <p> Those OO techniques are highly valid for Java, C++, Ruby or Python world.</p>  </blockquote>More thoughts of mine about Object Oriented Design <a href="http://bpfurtado.livejournal.com/2006/10/21/">here</a>.<span style="font-weight: bold;"><br /></span><p><br /> </p>
+subject=GoF applied only to statically typed OO languages?
+itemid=170
+anum=216
+url=http://bpfurtado.livejournal.com/43736.html
+props={taglist=gof, ruby, object_oriented, commentalter=1191094747, revnum=1, used_rte=1, current_music=[B@949f69, revtime=1191025100, opt_preformatted=1}
+eventtime=2007-09-29 16:44:00
+event=From the <a href="http://operawatch.com/">Opera Watch</a> <a href="http://operawatch.com/news/2007/09/opera-vs-firefox-vs-internet-explorer-picture.html">very fun pictures</a> of Firefox (with and without <a href="https://addons.mozilla.org"><i>add ons</i></a>), Opera and Internet Explorer :-)<br /><br /><img alt="Firefox logo" src="http://upload.wikimedia.org/wikipedia/en/thumb/e/e3/Firefox-logo.svg/133px-Firefox-logo.svg.png" /><img alt="Opera Internet Suite logo" src="http://upload.wikimedia.org/wikipedia/en/thumb/c/c6/Opera.svg/164px-Opera.svg.png" /> <div align="center"> </div>
+subject=Clipping: FF x Opera x IE
+itemid=171
+anum=20
+url=http://bpfurtado.livejournal.com/43796.html
+props={taglist=ie, opera, firefox, revnum=2, used_rte=1, revtime=1191095645, opt_preformatted=1}
+eventtime=2007-10-03 21:08:00
+event=[B@16dadf9
+subject=YouTuBerkeley
+itemid=172
+anum=183
+url=http://bpfurtado.livejournal.com/44215.html
+props={taglist=google, berkeley, youtube, revnum=1, used_rte=1, revtime=1191457089, opt_preformatted=1}
+eventtime=2007-10-08 09:44:00
+event=Windows XP Service Pack 3 has been released (<a href="http://it.slashdot.org/article.pl?sid=07/10/07/204258&amp;from=rss">slashdot article</a>), and even M$ is now upgrading some Vista features do their most advanced OS, the good old XP. <br /><blockquote>Contrary to popular belief, <span style="font-weight: bold;">Windows XP SP3 does ship with new features/components, </span>most of which have been<span style="font-weight: bold;"> backported from Windows Vista</span></blockquote><blockquote style="font-style: italic;">You're missing the real significance to this. They are back porting features from Vista!!! <span style="font-weight: bold;">That's removing the incentive for migration from XP to VISTA on features alone</span>. Considering the historic business model they have used, this is reason for further thought.</blockquote>
+subject="Upgrading" Vista features to XP
+itemid=173
+anum=38
+url=http://bpfurtado.livejournal.com/44326.html
+props={taglist=xp, slashdot, windows, vista, used_rte=1, opt_preformatted=1}
+eventtime=2007-10-10 09:01:00
+event=<div class="ljuser"><a href="http://rnaufal.livejournal.com/profile"><img width="17" height="17" src="http://stat.livejournal.com/img/userinfo.gif" alt="[info]" style="border: 0pt none ; vertical-align: bottom; padding-right: 1px;" /></a><a href="http://rnaufal.livejournal.com/"><b>rnaufal</b></a></div>&nbsp; has just sent me a interesting article on TSS about an implemention of <a href="http://www.theserverside.com/news/thread.tss?thread_id=46887">LINQ for Java</a> called <a href="http://andersnoras.com/blogs/anoras/archive/2007/09/11/introducing-quaere-language-integrated-queryies-for-java.aspx">Quaere</a>:<br /><blockquote>Dion Almaer: he met the author of Quaere, which is <b>an implementation of <a href="http://bpfurtado.livejournal.com/tag/linq">LINQ</a> for Java</b>. It's functional; the MS examples work; it's a way of representing iterable data in a relational format, more or less. Interesting stuff.<br /></blockquote>
+subject=LINQ for Java
+itemid=174
+anum=114
+url=http://bpfurtado.livejournal.com/44658.html
+props={taglist=java, tss, linq, revnum=1, used_rte=1, revtime=1192017913, opt_preformatted=1}
+eventtime=2007-10-14 21:10:00
+event=Yes, the new Office suite from IBM, the <a href="http://symphony.lotus.com/software/lotus/symphony/home.jspa">Lotus Symphony</a> (<a href="http://www.youtube.com/watch?v=c5AOoOumV1c">youtube video</a>) is built on the Eclipse platform as a set of plugins!<br />What an awesome use of the <a href="http://wiki.eclipse.org/index.php/Rich_Client_Platform">Eclipse Rich Client Platform</a>! (Similar platforms are available for IntelliJ IDEA and Netbeans environments)<br /><br />Will this be the beginning of a Office software suites <b>Second World War</b>?<br /><br /><lj-embed id="1" />
+subject=IBM's new office suite built as Eclipse plugins!
+itemid=175
+anum=43
+url=http://bpfurtado.livejournal.com/44843.html
+props={taglist=lotus, rcp, office, ibm, eclipse, commentalter=1192747852, revnum=2, used_rte=1, revtime=1192490474, opt_preformatted=1}
+eventtime=2007-10-15 20:49:00
+event=This well written <a href="http://www.artima.com/weblogs/viewpost.jsp?thread=214719">article</a> shows the anoyances on how to use regular Java classes in a <a href="http://jruby.codehaus.org/">JRuby</a> program. <br />Not only it is really confuse but not well documented (as the author states) with things that should be simple like the differences between bringing the module that provides the bridge to the JVM (isn't it <b>J</b>Ruby? Is a bridge needed?)<br /><blockquote><br />First, of course, it's necessary to bring in the module that provides the bridge to the JVM:<br /><br /><span style="font-weight: bold;">include Java</span><br /><br />Some things to note:<br /><br />    * Capitalization is significant.<br />    * This version generates an error, saying a module name is required but a string has been supplied:<br /><br style="font-weight: bold;" /><span style="font-weight: bold;">      include 'java'</span><br /><br />    * This pre 1.0 form is still out there on some web pages. It doesn't generate any obvious errors, but it doesn't work:<br /><br style="font-weight: bold;" /><span style="font-weight: bold;">      require 'java'</span><br /><br />    * Quotes are an error in this include statement and in the include_class statement. But they're required in the require statement, which comes between them. The mnemonic is "Quotes are required, not included."<br /><br />The program then needed to require every jar file that the program eventually used, even if it wasn't directly referenced in the JRuby script.<br /></blockquote><br />And more:<br /><blockquote><span style="text-decoration: underline;">Accessing External Classes</span><br /><br />So far, so good. But somehow I couldn't find quite enough information on the web to access 3rd party classes. After examining the writeups listed in the Resources and doing a lot of experimenting, I was able to make things work by doing the following:<br /><br />1. Tell JRuby where to find the JAR files. Options:<br /><br />   1. Put them in the <span style="font-weight: bold;">CLASSPATH </span>(did not work for me. JRuby didn't seem to read the environment)<br />   2. Put them in <span style="font-weight: bold;">$RUBY_HOME/lib</span> (haven't tried this)<br />   3. For NetBeans on Windows, in <span style="font-weight: bold;">JRUBY_EXTRA_CLASSPATH</span> (also didn't work for me)<br />   4. Give up and <span style="font-weight: bold;">specify the jar files with a full path</span>, as I did in Step #2.<br />   5. Follow the example Rob Di Marco's example and <span style="font-weight: bold;">put -I</span><directory><span style="font-weight: bold;"> on the command line for every directory that contains a jar file</span>.<br /></directory></blockquote><br />Well, these guys unfortunately are still missing this very important point of making a Ruby implementation that runs on the JVM. The very first thing I would try on any language that compiles to the JVM is the integration with regular class files.<br /><font color="#333399"><br /></font><b><font color="#333399">But don't get me wrong, I do believe JRuby is a hell of a project and the <a href="http://headius.blogspot.com/">blog</a> of the author of it is very very interesting. I've a deep respect to such a complex piece of software and the initiative to do so.</font><br /><br /></b>
+subject=<jruby:code>include Java</jruby:code>
+itemid=176
+anum=103
+url=http://bpfurtado.livejournal.com/45159.html
+props={taglist=java, jruby, artima, ruby, revnum=3, used_rte=1, revtime=1192577140, opt_preformatted=1}
+eventtime=2007-10-18 20:38:00
+event=[B@4aa0ce
+subject=Hello Google?
+itemid=177
+anum=204
+url=http://bpfurtado.livejournal.com/45516.html
+props={taglist=google, gphone, htc, iphone, revnum=2, used_rte=1, revtime=1192751602, opt_preformatted=1}
+eventtime=2007-10-20 13:27:00
+event=Charles Nutter shows us on <a href="http://headius.blogspot.com/">his blog</a> that a <a href="https://www.blogger.com/comment.g?blogID=20975090&amp;postID=8732578274977984614">single line patch</a> on Ruby REXML can increase <b>a lot</b> it's performance. <br />A little understanding of how it deals with strings and enconding made him to find this little gem of a patch.<br /><br />It's the Java community enhancing the Ruby code base :-)<br /><pre>Index: lib/ruby/1.8/rexml/source.rb<br />===================================================================<br />--- lib/ruby/1.8/rexml/source.rb        (revision 4596)<br />+++ lib/ruby/1.8/rexml/source.rb        (working copy)<br />@@ -1,4 +1,5 @@<br />require 'rexml/encoding'<br />+require 'stringio'<br /><br />module REXML<br />       # Generates Source-s.  USE THIS CLASS.<br />@@ -8,7 +9,7 @@<br />               # @return a Source, or nil if a bad argument was given<br />               def SourceFactory::create_from arg#, slurp=true<br />      if arg.kind_of? String<br /><span style="font-weight: bold; color: rgb(153, 51, 0);">-                         Source.new(arg)</span><br style="font-weight: bold;" /><span style="font-weight: bold; color: rgb(51, 153, 102);">+                         IOSource.new(StringIO.new(arg))</span><br />      elsif arg.respond_to? :read and<br />            arg.respond_to? :readline and<br />            arg.respond_to? :nil? and<br /></pre>REXML is...<br /><blockquote><span style="font-weight: bold;">REXML is a conformant XML processor for the Ruby</span> programming language. REXML passes 100% of the Oasis non-validating tests and includes full XPath support. It is reasonably fast, and is implemented in pure Ruby. Best of all, it has a clean, intuitive API. REXML is included in the standard library of Ruby<br /></blockquote>
+subject=Ruby: Single line patch, a leap on performance
+itemid=178
+anum=64
+url=http://bpfurtado.livejournal.com/45632.html
+props={taglist=blog, ruby, performance, commentalter=1193048589, revnum=1, used_rte=1, current_music=herbie hancock, revtime=1192898188, opt_preformatted=1}
+eventtime=2007-10-23 08:18:00
+event=<a href="http://meta.slashdot.org/article.pl?sid=07/10/01/1357243">10 years</a> of news for n3rds and stuff that really matt3rs ;-)<br /><br /><img alt="slashdot day photo 1" src="http://bpfurtado.net/lj_blog_images/SlashdotDay_10years_PaoComManteiga.jpg" /><br /><br />this one bellow with <a href="http://electricsand.blogspot.com/">Frank Sands</a> :)<br /><br /><img alt="slashdot day photo 2" src="http://bpfurtado.net/lj_blog_images/SlashdotDay_10years_PaoComManteiga_2.jpg" />
+subject=slashdotting.for(10).years
+itemid=179
+anum=179
+url=http://bpfurtado.livejournal.com/46003.html
+props={taglist=slashdot, commentalter=1193578306, revnum=1, used_rte=1, revtime=1193136709, opt_preformatted=1}
+eventtime=2007-10-28 11:41:00
+event=The new edition (4th) of the proposal for ECMAScript has just being <a href="http://www.ecmascript.org/es4/spec/overview.pdf">finished</a> (on 23 October 2007).<br /><br />Given the tiny fraction of time I spent on it so far, 5 minutes more or less to be precise (I'll read it all soon or later hehe) I could notice a few things that makes me wander, <b>is Javascript loosing its identity to become a mainstream language competing face to face with other dynamic languages like Groovy, Python and Ruby?</b><br /><br />My few highlights:<br />    <ul><li><span style="text-decoration: underline;">Classes and Prototypes</span>: I was so far the most popular dynamic Object Oriented language based on prototypes rather than classes and now it will have both mechanisms of defining the operation for your objects;</li>    <li><span style="text-decoration: underline;">Optional Type inference</span>: now you can if you want statically type your variables, for several reasons they describe even the performance one;</li>    <li><span style="text-decoration: underline;">Parametric classes</span>: such a polemic addition to the Java platform now finds one more home in the beautiful dynamic Javascript world;</li></ul>And much more very interesting things like <span style="font-style: italic;">visibility control</span>, <span style="font-style: italic;">strict mode</span>, <i>et cetera</i>.<br /><br />After a complete read on the new edition of the spec I'll post my thoughts here.<br /><p>Thanks to <a href="http://log4dev.com/">Miguel</a> for pointing me the link to <a target="_blank" href="http://www.ecmascript.org/es4/spec/overview.pdf" onclick="return top.js.OpenExtLink(window,event,this)">http://www.ecmascript.org/es4<wbr></wbr>/spec/overview.pdf</a><br /></p>
+subject=Javascript looking for a new identity
+itemid=180
+anum=119
+url=http://bpfurtado.livejournal.com/46199.html
+props={taglist=javascript, python, ruby, ecma, commentalter=1193655672, used_rte=1, opt_preformatted=1}
+[LJColligoPersistAllEntries:run:45] - Your blog has being saved!
+

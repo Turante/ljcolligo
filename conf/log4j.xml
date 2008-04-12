@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE log4j:configuration PUBLIC "-//Apache Software Foundation//DTD Log4j 1.2//EN" "log4j.dtd">
+
+<log4j:configuration xmlns:log4j='http://jakarta.apache.org/log4j/'>
+
+	<appender name="STDOUT" class="org.apache.log4j.ConsoleAppender">
+        <layout class="org.apache.log4j.PatternLayout">
+            <param name="ConversionPattern"
+				value="[%C{1}:%M:%L] - %m%n"/> 
+				<!-- value="%d{hh:mm:ss} %-5p [%C{1}:%M:%L] - %m%n"/>  -->
+        </layout>
+	</appender>
+
+    <category name="org.apache">
+        <priority value="error"/>
+    </category>
+
+    <category name="net.bpfurtado">
+        <priority value="debug"/>
+    </category>
+
+    <category name="org.apache.log4j.xml">
+        <priority value="info"/>
+    </category>
+    
+	<root>
+	   <priority value ="debug"/>
+   	   <appender-ref ref="STDOUT"/>
+	</root>
+</log4j:configuration>

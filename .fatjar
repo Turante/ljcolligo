@@ -1,0 +1,14 @@
+#Fat Jar Configuration File
+#Fri Nov 30 17:49:27 BRST 2007
+onejar.license.required=false
+manifest.classpath=
+manifest.removesigners=true
+onejar.checkbox=true
+jarname=LJColligo_0.5.jar
+manifest.mergeall=true
+manifest.mainclass=net.bpfurtado.ljcolligo.gui.LJColligoFrame
+manifest.file=<createnew>
+jarname.isextern=false
+onejar.expand=
+excludes=<jar|forms-1.1.0.jar>
+includes=

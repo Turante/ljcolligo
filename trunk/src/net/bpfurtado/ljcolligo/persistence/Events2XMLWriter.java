@@ -57,40 +57,41 @@ public class Events2XMLWriter extends LJColligoObservable
 	public void write(Collection<Event> events, File outputPath)
 	{
 		for (Event e : events) {
-			Element n = root.addElement("event");
-			n.addAttribute("id", getString(e.getId()));
-			n.addAttribute("subject", e.getSubject());
-			n.addAttribute("date", getString(e.getDate()));
-			n.addElement("body").addCDATA(new String(e.getBody().getBytes(), Charset.forName("UTF-8")));
-			n.addAttribute("aNum", getString(e.getANum()));
-			n.addAttribute("url", e.getUrl().toString());
+			Element event = root.addElement("event");
+			event.addAttribute("id", getString(e.getId()));
+			event.addAttribute("subject", e.getSubject());
+			event.addAttribute("date", getString(e.getDate()));
+			event.addElement("body").addCDATA(new String(e.getBody().getBytes(), Charset.forName("UTF-8")));
+			event.addAttribute("aNum", getString(e.getANum()));
+			event.addAttribute("url", e.getUrl().toString());
 
-			Element metaNode = n.addElement("metadata");
+			Element metadata = event.addElement("metadata");
 			EventMetadata meta = e.getMetadata();
-			metaNode.addAttribute("revisionTime", getString(meta.getRevisionTime()));
-			metaNode.addAttribute("revisionNumber", getString(meta.getRevisionNumber()));
-			metaNode.addAttribute("music", meta.getMusic());
-			metaNode.addAttribute("preformattedOption", getString(meta.getPreformattedOption()));
-			metaNode.addAttribute("location", meta.getLocation());
-			metaNode.addAttribute("moodId", getString(meta.getMoodId()));
+			metadata.addAttribute("revisionTime", getString(meta.getRevisionTime()));
+			metadata.addAttribute("revisionNumber", getString(meta.getRevisionNumber()));
+			metadata.addAttribute("music", meta.getMusic());
+			metadata.addAttribute("preformattedOption", getString(meta.getPreformattedOption()));
+			metadata.addAttribute("location", meta.getLocation());
+			metadata.addAttribute("moodId", getString(meta.getMoodId()));
 			String tags = meta.getTags().toString();
 			if (tags.length() > 2) { // TODO review this
-				metaNode.addAttribute("tags", tags.substring(1, tags.length() - 1));
+				metadata.addAttribute("tags", tags.substring(1, tags.length() - 1));
 			}
 
-			Element commentsNode = n.addElement("comments");
+			Element commentsNode = event.addElement("comments");
 			for (Comment c : e.getComments()) {
-				Element cNode = commentsNode.addElement("comment");
-				cNode.addAttribute("id", c.getId());
-				cNode.addAttribute("eventId", getString(c.getEventId()));
-				cNode.addAttribute("subject", getString(c.getSubject()));
-				cNode.addAttribute("date", getString(c.getDate()));
-				cNode.addAttribute("user", getString(c.getUser()));
-				cNode.addAttribute("posterId", getString(c.getPosterId()));
-				cNode.addAttribute("state", getString(c.getState()));
-				cNode.addAttribute("parentId", getString(c.getParentId()));
-				if (c.getBody() != null)
-					cNode.addElement("body").addCDATA(new String(c.getBody().getBytes(), Charset.forName("UTF-8")));
+				Element comments = commentsNode.addElement("comment");
+				comments.addAttribute("id", c.getId());
+				comments.addAttribute("eventId", getString(c.getEventId()));
+				comments.addAttribute("subject", getString(c.getSubject()));
+				comments.addAttribute("date", getString(c.getDate()));
+				comments.addAttribute("user", getString(c.getUser()));
+				comments.addAttribute("posterId", getString(c.getPosterId()));
+				comments.addAttribute("state", getString(c.getState()));
+				comments.addAttribute("parentId", getString(c.getParentId()));
+				if (c.getBody() != null) {
+					comments.addElement("body").addCDATA(new String(c.getBody().getBytes(), Charset.forName("UTF-8")));
+				}
 			}
 		}
 

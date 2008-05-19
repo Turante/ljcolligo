@@ -23,7 +23,7 @@
             <a href="$nextPage"><img src="forward.png" alt="back"/></a>
         #end
         <br/>
-        Powered by <a href="http://sourceforge.net/projects/ljcolligo/">LJColligo</a>.<br/>
+        Powered by <a href="http://code.google.com/p/ljcolligo">LJColligo</a>.<br/>
         <br/>
         Syndicate:<br/>
         <a href="http://${blogName}.livejournal.com/data/rss">

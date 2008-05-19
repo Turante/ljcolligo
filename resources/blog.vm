@@ -13,17 +13,25 @@
         </style>
     </head>
     <body>
-    <h1>Your static blog</h1>
+    <h1>$blogName</h1>
     <a name="top"></a>
     <div class="control">
-    #if($previousPage)
-        <a href="$previousPage"><img src="back.png" alt="back"/></a>
-    #end
-    #if($nextPage)
-        <a href="$nextPage"><img src="forward.png" alt="back"/></a>
-    #end
-    <br/>
-    Powered by <a href="http://sourceforge.net/projects/ljcolligo/">LJColligo</a>.
+        #if($previousPage)
+            <a href="$previousPage"><img src="back.png" alt="back"/></a>
+        #end
+        #if($nextPage)
+            <a href="$nextPage"><img src="forward.png" alt="back"/></a>
+        #end
+        <br/>
+        Powered by <a href="http://sourceforge.net/projects/ljcolligo/">LJColligo</a>.<br/>
+        <br/>
+        Syndicate:<br/>
+        <a href="http://${blogName}.livejournal.com/data/rss">
+            <img src="http://p-stat.livejournal.com/img/data_rss.gif" alt="RSS">
+        </a>
+        <a href="http://${blogName}.livejournal.com/data/atom">
+            <img src="http://p-stat.livejournal.com/img/data_atom.gif" alt="Atom">
+        </a>
     </div>
     <div class="events">
         #foreach($ev in $events)

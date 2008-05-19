@@ -1,0 +1,104 @@
+.eventFooter {
+    padding-bottom: 6px;
+    background: #E9E8E8;
+}
+
+.tags {
+    padding-left: .3em;
+    padding-right: .3em;
+    background: #E9E8E8;
+    float: left;
+}
+
+.leaveAComment {
+    text-align: right;
+    padding-left: .3em;
+    padding-right: .3em;
+    background: #E9E8E8;
+}
+
+div.footer {
+    float: left;
+    clear: both;
+    padding: 4px 4px 4px 4px;
+    /*background: #808080;*/
+}
+
+h1 {
+    background: white;
+    padding: 3px 2em 3px 2em;
+    margin-left: 3px;
+    margin-right: 3px;
+    text-align: center;
+    color: #c6c6c6;
+    border: thin solid #808080;
+}
+
+div.control {
+    background: #E0E9E9;
+    float: left;
+    clear: none;
+    width: 8%;
+    padding:3px 3px 3px 3px;
+    position: fixed;
+    left:6px;
+    top: 6px;
+    border: thin solid black;
+}
+
+.events {
+    float: right;
+    clear: none;
+    width: 90%;
+}
+
+.event {
+    padding-top: .5em;
+    padding-bottom: .5em;
+    margin-bottom: 1em;
+    border: solid thin;
+}
+
+body {
+    font-family: Georgia, sans-serif;
+    background: #DEDFCE;    
+}
+
+.header {
+    font-weight: bold;
+    background-color: #bdbabd;
+    border: thin black;
+    padding-left: .3em;
+    padding-right: .3em;
+    float:left;
+}
+
+.subject {
+    float: left;
+}
+
+.date {
+    float: right;
+}
+
+.body {
+    background-color: #e9e8e8;
+    clear: both;
+    padding: 1em 1em 1em 1em;
+}
+
+
+blockquote {
+    background-color: #b2d67d;
+    padding: .5em .5em .5em .5em;
+    border: thin dashed;
+}
+
+img {
+    border: none;
+}
+
+.footer > a > img {
+    float: right;
+    clear: none;
+}

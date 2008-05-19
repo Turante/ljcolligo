@@ -36,98 +36,103 @@ import org.apache.log4j.Logger;
  */
 public class Conf
 {
-	private static final Logger logger = Logger.getLogger(Conf.class);
+    private static final Logger logger = Logger.getLogger(Conf.class);
 
-	public static final String USER_NAME = "userName";
-	public static final String PASSWORD = "password";
+    public static final String USER_NAME = "userName";
+    public static final String PASSWORD = "password";
 
-	private static final Conf inst = new Conf();
+    private static final Conf inst = new Conf();
 
-	public static Conf getInstance()
-	{
-		return inst;
-	}
+    public static Conf getInstance()
+    {
+        return inst;
+    }
 
-	private Properties properties;
-	private File file;
+    private Properties properties;
+    private File file;
 
-	private Conf()
-	{
-		try {
-			properties = new Properties();
-			file = new File(System.getProperty("user.home") + File.separator + "ljcolligo.properties");
-			if (file.exists()) {
-				properties.loadFromXML(new FileInputStream(file));
-			} else {
-				PrintWriter writer = new PrintWriter(file);
-				writer.println("userName=<YOUR_USER_NAME>");
-				writer.println("password=<YOUR_PASSWORD>");
-				writer.flush();
-				writer.close();
-				logger.warn("Configuration file [" + file + "] not found, one was created for you, please fill in the user and password on it");
-			}
-		} catch (Exception e) {
-			throw new LJColligoException(e);
-		}
-	}
+    private Conf()
+    {
+        try {
+            properties = new Properties();
+            file = new File(System.getProperty("user.home") + File.separator + "ljcolligo.properties");
+            if (file.exists()) {
+                properties.loadFromXML(new FileInputStream(file));
+            } else {
+                PrintWriter writer = new PrintWriter(file);
+                writer.println("userName=<YOUR_USER_NAME>");
+                writer.println("password=<YOUR_PASSWORD>");
+                writer.flush();
+                writer.close();
+                logger.warn("Configuration file [" + file + "] not found, one was created for you, please fill in the user and password on it");
+            }
+        } catch (Exception e) {
+            throw new LJColligoException(e);
+        }
+    }
 
-	public String get(String key)
-	{
-		return properties.getProperty(key);
-	}
+    public String get(String key)
+    {
+        return properties.getProperty(key);
+    }
 
-	public String get(String key, String defaultValue)
-	{
-		String r = properties.getProperty(key);
-		if (r == null)
-			return defaultValue;
-		return r;
-	}
+    public String get(String key, String defaultValue)
+    {
+        String r = properties.getProperty(key);
+        if (r == null)
+            return defaultValue;
+        return r;
+    }
 
-	public String getPassword()
-	{
-		String password = properties.getProperty(PASSWORD);
-		if (password == null) {
-			logger.warn("No password saved on file [" + file + "], create the file and/or put a line: password=<YOUR_PASSWORD>");
-			return "";
-		}
-		return EncryptionUtil.decrypt(password);
-	}
+    public String getPassword()
+    {
+        String password = properties.getProperty(PASSWORD);
+        if (password == null) {
+            logger.warn("No password saved on file [" + file + "], create the file and/or put a line: password=<YOUR_PASSWORD>");
+            return "";
+        }
+        return EncryptionUtil.decrypt(password);
+    }
 
-	public void setPassword(String pw)
-	{
-		properties.put(PASSWORD, EncryptionUtil.encrypt(pw));
-	}
+    public void setPassword(String pw)
+    {
+        properties.put(PASSWORD, EncryptionUtil.encrypt(pw));
+    }
 
-	public String getUserName()
-	{
-		String userName = properties.getProperty(USER_NAME);
-		if (userName == null) {
-			logger.warn("No user name saved on file [" + file + "], create the file and/or put a line: userName=<YOUR_USER_NAME>");
-			return "";
-		}
-		return userName;
-	}
+    public String getUserName()
+    {
+        String userName = properties.getProperty(USER_NAME);
+        if (userName == null) {
+            logger.warn("No user name saved on file [" + file + "], create the file and/or put a line: userName=<YOUR_USER_NAME>");
+            return "";
+        }
+        return userName;
+    }
 
-	public void setUserName(String userName)
-	{
-		properties.put(USER_NAME, userName);
-	}
+    public String getLJColligoTempDir()
+    {
+        return get("temp.dir", System.getProperty("java.io.tmpdir"));
+    }
 
-	public void set(String key, String s)
-	{
-		properties.setProperty(key, s);
-	}
+    public void setUserName(String userName)
+    {
+        properties.put(USER_NAME, userName);
+    }
 
-	public void save()
-	{
-		try {
-			logger.debug("Saving to " + file);
-			FileOutputStream output = new FileOutputStream(file);
-			properties.storeToXML(output, "no comments", "UTF-8");
-			logger.debug("Saved to " + file);
-		} catch (Exception e) {
-			throw new LJColligoException(e);
-		}
-	}
+    public void set(String key, String s)
+    {
+        properties.setProperty(key, s);
+    }
+
+    public void save()
+    {
+        try {
+            logger.debug("Saving to " + file);
+            FileOutputStream output = new FileOutputStream(file);
+            properties.storeToXML(output, "no comments", "UTF-8");
+            logger.debug("Saved to " + file);
+        } catch (Exception e) {
+            throw new LJColligoException(e);
+        }
+    }
 }

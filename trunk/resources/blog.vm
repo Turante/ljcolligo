@@ -38,7 +38,7 @@
         <div class="event">
             <div class="header">
                 <div class="subject">$ev.subject</div>
-                <div class="date">$ev.date</div>
+                <div class="date">$sdf.format($ev.date)</div>
             </div>
             <div class="body">
                 $ev.body

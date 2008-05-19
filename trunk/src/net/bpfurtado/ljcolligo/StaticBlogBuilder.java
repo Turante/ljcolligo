@@ -25,6 +25,7 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.io.StringWriter;
+import java.text.SimpleDateFormat;
 import java.util.LinkedList;
 import java.util.List;
 import java.util.Properties;
@@ -141,6 +142,8 @@ public class StaticBlogBuilder
 
             String url = events.get(0).getUrl().toString();
             context.put("blogName", url.substring(url.indexOf('/') + 2, url.indexOf('.')));
+
+            context.put("sdf", new SimpleDateFormat("MMM. dd, yyyy @ hh:mm a"));
 
             return context;
         } catch (Exception e) {

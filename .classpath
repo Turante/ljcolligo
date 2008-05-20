@@ -12,10 +12,10 @@
 	<classpathentry kind="lib" path="lib/forms-1.1.0.jar"/>
 	<classpathentry kind="lib" path="lib/jaxen-1.1-beta-6.jar"/>
 	<classpathentry kind="lib" path="lib/log4j-1.2.15.jar"/>
+	<classpathentry kind="lib" path="lib/velocity-1.5.jar"/>
+	<classpathentry kind="lib" path="lib/velocity-dep-1.5.jar"/>
 	<classpathentry kind="lib" path="lib/ws-commons-util-1.0.2.jar"/>
 	<classpathentry kind="lib" path="lib/xmlrpc-client-3.1.jar"/>
 	<classpathentry kind="lib" path="lib/xmlrpc-common-3.1.jar"/>
-	<classpathentry kind="lib" path="lib/velocity-1.5.jar"/>
-	<classpathentry kind="lib" path="lib/velocity-dep-1.5.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

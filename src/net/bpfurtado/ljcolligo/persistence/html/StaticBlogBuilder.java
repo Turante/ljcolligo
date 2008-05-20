@@ -30,7 +30,6 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Properties;
 
-import net.bpfurtado.ljcolligo.EventsCacheReader;
 import net.bpfurtado.ljcolligo.LJColligoException;
 import net.bpfurtado.ljcolligo.model.Event;
 import net.bpfurtado.ljcolligo.util.Conf;

@@ -48,7 +48,7 @@ public class EventsCacheReader
         System.out.println("events.size = " + events.size());
     }
 
-    static List<Event> readEvents()
+    public static List<Event> readEvents()
     {
         try {
             List<Event> events;

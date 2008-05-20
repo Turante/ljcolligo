@@ -19,7 +19,7 @@
  *
  * Project page: http://sourceforge.net/projects/ljcolligo/
  */
-package net.bpfurtado.ljcolligo;
+package net.bpfurtado.ljcolligo.persistence.html;
 
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
@@ -27,6 +27,8 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.util.List;
 
+import net.bpfurtado.ljcolligo.LJColligo;
+import net.bpfurtado.ljcolligo.LJColligoException;
 import net.bpfurtado.ljcolligo.model.Event;
 import net.bpfurtado.ljcolligo.util.Conf;
 

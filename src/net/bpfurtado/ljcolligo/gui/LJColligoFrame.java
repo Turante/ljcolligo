@@ -374,9 +374,10 @@ public class LJColligoFrame extends JFrame implements LJColligoListener, Downloa
     private void openGeneratedOutputFileAction()
     {
         try {
+            logger.debug(generatedOutputFile);
             Desktop.getDesktop().open(generatedOutputFile);
         } catch (Exception e) {
-            throw new LJColligoException(e);
+            throw new LJColligoException("generatedOutputFile = " + generatedOutputFile, e);
         }
     }
 

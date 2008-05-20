@@ -35,7 +35,7 @@ import net.bpfurtado.ljcolligo.util.Conf;
 public class EventsCacheReader
 {
     private static final Conf conf = Conf.getInstance();
-    private static final String filePath = "C:\\Users\\Bruno\\tmp\\ljcolligo\\events.dat";
+    private static final String filePath = System.getProperty("user.home") + "/tmp/ljcolligo/events.dat";
 
     public static void main(String[] args) throws Exception
     {

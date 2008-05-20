@@ -22,12 +22,15 @@ package net.bpfurtado.ljcolligo.gui;
 
 import java.io.File;
 import java.util.Collection;
+import java.util.LinkedList;
 import java.util.List;
 
 import javax.swing.SwingWorker;
 
 import net.bpfurtado.ljcolligo.LJColligo;
 import net.bpfurtado.ljcolligo.LJColligoListener;
+import net.bpfurtado.ljcolligo.model.Event;
+import net.bpfurtado.ljcolligo.persistence.html.StaticBlogBuilder;
 
 public class DownloadInBackground extends SwingWorker<Collection<String>, String> implements LJColligoListener
 {
@@ -53,7 +56,17 @@ public class DownloadInBackground extends SwingWorker<Collection<String>, String
     @Override
     public Collection<String> doInBackground()
     {
-        this.outputFile = facade.downloadAndPersist(userName, password, outputPath);
+        List<Event> events = new LinkedList<Event>();
+        this.outputFile = facade.downloadAndPersist(userName, password, outputPath, events);
+
+        String name = outputFile.getName();
+        String outFolderPrefix = name.substring(0, name.length() - 4);
+        
+        File outFolder = new File(outputPath + File.separator + outFolderPrefix + "_StaticBlog");
+        outFolder.mkdirs();
+        StaticBlogBuilder staticBlog = new StaticBlogBuilder(outFolder);
+        staticBlog.build(events, 20);
+
         return null;
     }
 

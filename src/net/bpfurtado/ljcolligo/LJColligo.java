@@ -55,12 +55,12 @@ public class LJColligo extends LJColligoObservable
         super(other);
     }
 
-    public File downloadAndPersist(String userName, String password, String outputPath)
+    public File downloadAndPersist(String userName, String password, String outputPath, Collection<Event> events)
     {
         logger.debug("Start");
         sendMessageToListeners("Start");
 
-        Collection<Event> events = downloadEvents(userName, password);
+        events.addAll(downloadEvents(userName, password));
 
         if (!outputPath.endsWith(File.separator)) {
             outputPath += File.separator;

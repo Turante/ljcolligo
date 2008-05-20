@@ -78,7 +78,7 @@ public class StaticBlogBuilder
         }
     }
 
-    public void build(List<Event> events, int entriesPerPage)
+    public File build(List<Event> events, int entriesPerPage)
     {
         int lastPage = lastPage(events.size(), entriesPerPage);
 
@@ -101,6 +101,8 @@ public class StaticBlogBuilder
         }
 
         copyResourcesTo(outputPath);
+
+        return new File(outputPath + File.separator + pageLink(0));
     }
 
     private static void copyResourcesTo(File outputPath)

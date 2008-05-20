@@ -54,7 +54,7 @@ public class About extends JDialog
 {
     private static final long serialVersionUID = 6274009586799124340L;
 
-    private static final String PROJECT_URL_STR = "http://sourceforge.net/projects/ljcolligo";
+    private static final String PROJECT_URL_STR = "http://code.google.com/p/ljcolligo";
 
     private static final Font URL_SELECTED_FONT = new Font("Tahoma", Font.PLAIN, 11);
     private static final Font URL_REGULAR_FONT = new Font("Tahoma", Font.PLAIN, 11);
@@ -137,7 +137,7 @@ public class About extends JDialog
         appDescLb.setText("<html>LJ Colligo is a way to download all your LiveJournal blog entries and comments to your local machine.");
 
         versionLabel.setText("Product Version:");
-        appVersionLabel.setText("0.4");
+        appVersionLabel.setText("0.8");
         appVersionLabel.setFont(FONT);
 
         authorLb.setText("Author");

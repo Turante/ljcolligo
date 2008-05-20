@@ -34,7 +34,7 @@ import net.bpfurtado.ljcolligo.GetEvents;
 import net.bpfurtado.ljcolligo.LJColligoException;
 import net.bpfurtado.ljcolligo.model.Event;
 import net.bpfurtado.ljcolligo.model.EventMetadata;
-import net.bpfurtado.ljcolligo.persistence.Map2XMLWriter;
+import net.bpfurtado.ljcolligo.persistence.xml.Map2XMLWriter;
 
 import org.apache.log4j.Logger;
 

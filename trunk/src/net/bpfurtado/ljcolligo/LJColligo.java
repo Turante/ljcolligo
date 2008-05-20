@@ -31,7 +31,7 @@ import java.util.Map;
 import net.bpfurtado.ljcolligo.model.Comment;
 import net.bpfurtado.ljcolligo.model.Event;
 import net.bpfurtado.ljcolligo.model.LJColligoObservable;
-import net.bpfurtado.ljcolligo.persistence.Events2XMLWriter;
+import net.bpfurtado.ljcolligo.persistence.xml.Events2XMLWriter;
 import net.bpfurtado.ljcolligo.util.Util;
 
 import org.apache.log4j.Logger;

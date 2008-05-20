@@ -1,22 +1,22 @@
 /**
  * Created by Bruno Patini Furtado [http://bpfurtado.livejournal.com]
  * Created on 25/11/2007 11:01:14
- * 
+ *
  * This file is part of LJColligo.
- * 
+ *
  * LJColligo is free software: you can redistribute it and/or modify
  * it under the terms of the GNU General Public License as published by
  * the Free Software Foundation, either version 3 of the License, or
  * (at your option) any later version.
- * 
+ *
  * LJColligo is distributed in the hope that it will be useful,
  * but WITHOUT ANY WARRANTY; without even the implied warranty of
  * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
  * GNU General Public License for more details.
- * 
+ *
  * You should have received a copy of the GNU General Public License
  * along with LJColligo.  If not, see <http://www.gnu.org/licenses/>.
- * 
+ *
  * Project page: http://sourceforge.net/projects/ljcolligo/
  */
 
@@ -33,7 +33,7 @@ public class Util
     public static ImageIcon getImage(String imageName)
     {
         try {
-            return new ImageIcon(LJColligoFrame.class.getResource("/net/bpfurtado/ljcolligo/resources/images/" + imageName));
+            return new ImageIcon(LJColligoFrame.class.getResource("/net/bpfurtado/ljcolligo/gui/" + imageName));
         } catch (NullPointerException npe) {
             throw new LJColligoException("[" + imageName + "] could no be loaded", npe);
         }

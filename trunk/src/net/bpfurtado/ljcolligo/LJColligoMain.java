@@ -25,7 +25,7 @@ import java.io.File;
 import java.util.Collection;
 
 import net.bpfurtado.ljcolligo.model.Event;
-import net.bpfurtado.ljcolligo.persistence.Events2XMLWriter;
+import net.bpfurtado.ljcolligo.persistence.xml.Events2XMLWriter;
 import net.bpfurtado.ljcolligo.util.Conf;
 import net.bpfurtado.ljcolligo.util.Util;
 

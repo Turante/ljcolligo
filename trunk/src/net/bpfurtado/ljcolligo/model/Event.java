@@ -21,115 +21,118 @@
 
 package net.bpfurtado.ljcolligo.model;
 
+import java.io.Serializable;
 import java.net.URL;
 import java.util.Collection;
 import java.util.Date;
 import java.util.LinkedList;
 
-public class Event
+public class Event implements Serializable
 {
-	private Integer id;
+    private static final long serialVersionUID = -147754089034715853L;
 
-	private String subject;
-	private Date date;
-	private String body;
+    private Integer id;
 
-	private Integer aNum;
+    private String subject;
+    private Date date;
+    private String body;
 
-	private URL url;
-	private EventMetadata metadata;
+    private Integer aNum;
 
-	private Collection<Comment> comments = new LinkedList<Comment>();
+    private URL url;
+    private EventMetadata metadata;
 
-	@Override
-	public String toString()
-	{
-		String bodyExcerpt = "";
-		if (body != null)
-			bodyExcerpt = body.substring(0, 50);
+    private Collection<Comment> comments = new LinkedList<Comment>();
 
-		return "[Event: id=" + id + ", subject=" + subject + ", body=" + bodyExcerpt + "..." +
-				", url=" + url + ", metadata=" + metadata +
-				"comments=" + comments + "]";
-	}
+    @Override
+    public String toString()
+    {
+        String bodyExcerpt = "";
+        if (body != null)
+            bodyExcerpt = body.substring(0, 50);
 
-	public Integer getId()
-	{
-		return id;
-	}
+        return "[Event: id=" + id + ", subject=" + subject + ", body=" + bodyExcerpt + "..." +
+                ", url=" + url + ", metadata=" + metadata +
+                "comments=" + comments + "]";
+    }
 
-	public Date getDate()
-	{
-		return date;
-	}
+    public Integer getId()
+    {
+        return id;
+    }
 
-	public String getBody()
-	{
-		return body;
-	}
+    public Date getDate()
+    {
+        return date;
+    }
 
-	public Integer getANum()
-	{
-		return aNum;
-	}
+    public String getBody()
+    {
+        return body;
+    }
 
-	public URL getUrl()
-	{
-		return url;
-	}
+    public Integer getANum()
+    {
+        return aNum;
+    }
 
-	public EventMetadata getMetadata()
-	{
-		return metadata;
-	}
+    public URL getUrl()
+    {
+        return url;
+    }
 
-	public Iterable<Comment> getComments()
-	{
-		return comments;
-	}
+    public EventMetadata getMetadata()
+    {
+        return metadata;
+    }
 
-	public void setId(Integer id)
-	{
-		this.id = id;
-	}
+    public Iterable<Comment> getComments()
+    {
+        return comments;
+    }
 
-	public void setDate(Date date)
-	{
-		this.date = date;
-	}
+    public void setId(Integer id)
+    {
+        this.id = id;
+    }
 
-	public void setBody(String body)
-	{
-		this.body = body;
-	}
+    public void setDate(Date date)
+    {
+        this.date = date;
+    }
 
-	public void setANum(Integer num)
-	{
-		aNum = num;
-	}
+    public void setBody(String body)
+    {
+        this.body = body;
+    }
 
-	public void setUrl(URL url)
-	{
-		this.url = url;
-	}
+    public void setANum(Integer num)
+    {
+        aNum = num;
+    }
 
-	public void setMetadata(EventMetadata metadata)
-	{
-		this.metadata = metadata;
-	}
+    public void setUrl(URL url)
+    {
+        this.url = url;
+    }
 
-	public String getSubject()
-	{
-		return subject;
-	}
+    public void setMetadata(EventMetadata metadata)
+    {
+        this.metadata = metadata;
+    }
 
-	public void setSubject(String subject)
-	{
-		this.subject = subject;
-	}
+    public String getSubject()
+    {
+        return subject;
+    }
 
-	public void add(Comment c)
-	{
-		comments.add(c);
-	}
+    public void setSubject(String subject)
+    {
+        this.subject = subject;
+    }
+
+    public void add(Comment c)
+    {
+        comments.add(c);
+    }
 }

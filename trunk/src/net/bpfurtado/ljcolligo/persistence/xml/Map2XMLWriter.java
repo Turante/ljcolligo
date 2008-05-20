@@ -19,7 +19,7 @@
  * 
  * Project page: http://sourceforge.net/projects/ljcolligo/
  */
-package net.bpfurtado.ljcolligo.persistence;
+package net.bpfurtado.ljcolligo.persistence.xml;
 
 import java.io.File;
 import java.nio.charset.Charset;

@@ -21,94 +21,97 @@
 
 package net.bpfurtado.ljcolligo.model;
 
+import java.io.Serializable;
 import java.util.Collection;
 import java.util.Date;
 
-public class EventMetadata
+public class EventMetadata implements Serializable
 {
-	private Collection<String> tags;
+    private static final long serialVersionUID = 7784632207038421249L;
 
-	private Date revisionTime;
-	private Integer revisionNumber;
+    private Collection<String> tags;
 
-	private String music;
-	private Boolean preformattedOption;
-	private String location;
-	private Integer moodId;
-	
-	@Override
-	public String toString()
-	{
-		return "[Event: tags=" + tags + "]";
-	}
+    private Date revisionTime;
+    private Integer revisionNumber;
 
-	public Collection<String> getTags()
-	{
-		return tags;
-	}
+    private String music;
+    private Boolean preformattedOption;
+    private String location;
+    private Integer moodId;
 
-	public Integer getRevisionNumber()
-	{
-		return revisionNumber;
-	}
+    @Override
+    public String toString()
+    {
+        return "[Event: tags=" + tags + "]";
+    }
 
-	public String getMusic()
-	{
-		return music;
-	}
+    public Collection<String> getTags()
+    {
+        return tags;
+    }
 
-	public Date getRevisionTime()
-	{
-		return revisionTime;
-	}
+    public Integer getRevisionNumber()
+    {
+        return revisionNumber;
+    }
 
-	public Boolean getPreformattedOption()
-	{
-		return preformattedOption;
-	}
+    public String getMusic()
+    {
+        return music;
+    }
 
-	public String getLocation()
-	{
-		return location;
-	}
+    public Date getRevisionTime()
+    {
+        return revisionTime;
+    }
 
-	public Integer getMoodId()
-	{
-		return moodId;
-	}
+    public Boolean getPreformattedOption()
+    {
+        return preformattedOption;
+    }
 
-	public void setTags(Collection<String> tags)
-	{
-		this.tags = tags;
-	}
+    public String getLocation()
+    {
+        return location;
+    }
 
-	public void setRevisionNumber(Integer revisionNumber)
-	{
-		this.revisionNumber = revisionNumber;
-	}
+    public Integer getMoodId()
+    {
+        return moodId;
+    }
 
-	public void setMusic(String music)
-	{
-		this.music = music;
-	}
+    public void setTags(Collection<String> tags)
+    {
+        this.tags = tags;
+    }
 
-	public void setRevisionTime(Date revisionTime)
-	{
-		this.revisionTime = revisionTime;
-	}
+    public void setRevisionNumber(Integer revisionNumber)
+    {
+        this.revisionNumber = revisionNumber;
+    }
 
-	public void setPreformattedOption(Boolean preformattedOption)
-	{
-		this.preformattedOption = preformattedOption;
-	}
+    public void setMusic(String music)
+    {
+        this.music = music;
+    }
 
-	public void setLocation(String location)
-	{
-		this.location = location;
-	}
+    public void setRevisionTime(Date revisionTime)
+    {
+        this.revisionTime = revisionTime;
+    }
 
-	public void setMoodId(Integer integer)
-	{
-		this.moodId = integer;
-	}
+    public void setPreformattedOption(Boolean preformattedOption)
+    {
+        this.preformattedOption = preformattedOption;
+    }
+
+    public void setLocation(String location)
+    {
+        this.location = location;
+    }
+
+    public void setMoodId(Integer integer)
+    {
+        this.moodId = integer;
+    }
 }

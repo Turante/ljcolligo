@@ -29,35 +29,35 @@ import net.bpfurtado.ljcolligo.LJColligoListener;
 
 public abstract class LJColligoObservable
 {
-	private Collection<LJColligoListener> ls = new LinkedList<LJColligoListener>();
+    private Collection<LJColligoListener> ls = new LinkedList<LJColligoListener>();
 
-	public LJColligoObservable()
-	{
-	}
+    public LJColligoObservable()
+    {
+    }
 
-	public LJColligoObservable(LJColligoObservable other)
-	{
-		addAllListenersFrom(other);
-	}
+    public LJColligoObservable(LJColligoObservable other)
+    {
+        addAllListenersFrom(other);
+    }
 
-	public void addAllListenersFrom(LJColligoObservable o)
-	{
-		ls.addAll(o.ls);
-	}
+    public void addAllListenersFrom(LJColligoObservable o)
+    {
+        ls.addAll(o.ls);
+    }
 
-	public void addListener(LJColligoListener l)
-	{
-		ls.add(l);
-	}
+    public void addListener(LJColligoListener l)
+    {
+        ls.add(l);
+    }
 
-	public void sendMessageToListeners(String msg)
-	{
-		if (!msg.endsWith("\n")) {
-			msg += "\n";
-		}
+    public void sendMessageToListeners(String msg)
+    {
+        if (!msg.endsWith("\n")) {
+            msg += "\n";
+        }
 
-		for (LJColligoListener l : ls) {
-			l.receiveFromLJColligo(msg);
-		}
-	}
+        for (LJColligoListener l : ls) {
+            l.receiveFromLJColligo(msg);
+        }
+    }
 }

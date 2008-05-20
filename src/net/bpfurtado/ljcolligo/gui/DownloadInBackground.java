@@ -57,7 +57,7 @@ public class DownloadInBackground extends SwingWorker<Collection<String>, String
     public Collection<String> doInBackground()
     {
         List<Event> events = new LinkedList<Event>();
-        this.outputFile = facade.downloadAndPersist(userName, password, outputPath, events);
+        facade.downloadAndPersist(userName, password, outputPath, events);
 
         String name = outputFile.getName();
         String outFolderPrefix = name.substring(0, name.length() - 4);

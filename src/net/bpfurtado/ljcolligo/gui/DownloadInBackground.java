@@ -61,11 +61,11 @@ public class DownloadInBackground extends SwingWorker<Collection<String>, String
 
         String name = outputFile.getName();
         String outFolderPrefix = name.substring(0, name.length() - 4);
-        
+
         File outFolder = new File(outputPath + File.separator + outFolderPrefix + "_StaticBlog");
         outFolder.mkdirs();
         StaticBlogBuilder staticBlog = new StaticBlogBuilder(outFolder);
-        staticBlog.build(events, 20);
+        this.outputFile = staticBlog.build(events, 20);
 
         return null;
     }

@@ -22,8 +22,10 @@
 package net.bpfurtado.ljcolligo.persistence.html;
 
 import java.io.File;
+import java.io.FileOutputStream;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.io.InputStream;
 import java.io.StringWriter;
 import java.text.SimpleDateFormat;
 import java.util.LinkedList;
@@ -50,6 +52,8 @@ public class StaticBlogBuilder
 {
     private static final Logger logger = Logger.getLogger(StaticBlogBuilder.class);
 
+    private static final String RES_HOME = "/net/bpfurtado/ljcolligo/persistence/html/";
+
     private static final Conf conf = Conf.getInstance();
 
     private Template blogTemplate = null;
@@ -68,7 +72,7 @@ public class StaticBlogBuilder
         this.outputPath = outputPath;
         try {
             initVelocityEngine();
-            blogTemplate = Velocity.getTemplate("/blog.vm");
+            blogTemplate = Velocity.getTemplate(RES_HOME + "blog.vm");
         } catch (Exception e) {
             throw new LJColligoException(e);
         }
@@ -94,6 +98,31 @@ public class StaticBlogBuilder
                 page++;
             }
             i++;
+        }
+
+        copyResourcesTo(outputPath);
+    }
+
+    private static void copyResourcesTo(File outputPath)
+    {
+        copy("blog.css", outputPath);
+        copy("back.png", outputPath);
+        copy("forward.png", outputPath);
+    }
+
+    private static void copy(String fileName, File outputPath)
+    {
+        InputStream in = StaticBlogBuilder.class.getResourceAsStream(RES_HOME + fileName);
+        try {
+            FileOutputStream o = new FileOutputStream(new File(outputPath + File.separator + fileName));
+            byte data[] = new byte[in.available()];
+            in.read(data);
+            o.write(data);
+            o.flush();
+            o.close();
+            in.close();
+        } catch (Exception e) {
+            throw new LJColligoException(e);
         }
     }
 

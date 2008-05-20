@@ -18,10 +18,10 @@
     <a name="top"></a>
     <div class="control">
         #if($previousPage)
-            <a href="$previousPage"><img src="back.png" alt="back"/></a>
+            <a href="$previousPage"><img src="back.png" alt="previous"/></a>
         #end
         #if($nextPage)
-            <a href="$nextPage"><img src="forward.png" alt="back"/></a>
+            <a href="$nextPage"><img src="forward.png" alt="next"/></a>
         #end
         <br/>
         Powered by <a href="http://code.google.com/p/ljcolligo">LJColligo</a>.<br/>

@@ -13,7 +13,8 @@
         </style>
     </head>
     <body>
-    <h1>$blogName</h1>
+    #set($blogURL = "http://${blogName}.livejournal.com")
+    <h1><a href="$blogURL" title="On line Blog">$blogName</a></h1>
     <a name="top"></a>
     <div class="control">
         #if($previousPage)
@@ -48,8 +49,8 @@
                     <div class="tags">
                         Tags:&nbsp;&nbsp;
                         #foreach($tag in $ev.metadata.tags)
-                            #set($link = "http://${blogName}.livejournal.com/tag/${tag}")
-                            <a href="$link">$tag</a>&nbsp;&nbsp;
+                            #set($link = "${blogURL}/tag/${tag}")
+                            <a href="$link">$tag</a>&nbsp;
                         #end
                     </div>
                 #end

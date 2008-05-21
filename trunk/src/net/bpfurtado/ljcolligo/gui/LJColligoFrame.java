@@ -30,7 +30,10 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.ComponentAdapter;
 import java.awt.event.ComponentEvent;
+import java.awt.event.FocusEvent;
+import java.awt.event.FocusListener;
 import java.awt.event.KeyEvent;
+import java.awt.event.KeyListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.io.File;
@@ -218,11 +221,27 @@ public class LJColligoFrame extends JFrame implements LJColligoListener, Downloa
     {
         this.userNameTf = new JTextField(Conf.getInstance().getUserName(), 20);
         userNameTf.setFont(FONT);
+        addEnterEvent(userNameTf);
 
         this.passwordTf = new JPasswordField(Conf.getInstance().getPassword(), 20);
+        passwordTf.addFocusListener(new FocusListener() {
+            @Override
+            public void focusGained(FocusEvent e)
+            {
+                JTextField t = (JTextField) e.getSource();
+                t.selectAll();
+            }
+
+            @Override
+            public void focusLost(FocusEvent e)
+            {
+            }
+        });
+        addEnterEvent(passwordTf);
         passwordTf.setFont(FONT);
 
         outputDirTf.setText(System.getProperty("user.home"));
+        addEnterEvent(outputDirTf);
 
         this.chooseOutputDirBt = new JButton("Choose...");
         chooseOutputDirBt.setMnemonic('c');
@@ -260,6 +279,30 @@ public class LJColligoFrame extends JFrame implements LJColligoListener, Downloa
         outputTA.setLineWrap(true);
         outputTA.setWrapStyleWord(true);
         outputTA.setEditable(false);
+    }
+
+    private void addEnterEvent(JTextField tf)
+    {
+        KeyListener enterToDownloadClick = new KeyListener() {
+            @Override
+            public void keyPressed(KeyEvent e)
+            {
+                if (e.getKeyCode() == KeyEvent.VK_ENTER) {
+                    LJColligoFrame.this.downloadBt.doClick();
+                }
+            }
+
+            @Override
+            public void keyReleased(KeyEvent e)
+            {
+            }
+
+            @Override
+            public void keyTyped(KeyEvent e)
+            {
+            }
+        };
+        tf.addKeyListener(enterToDownloadClick);
     }
 
     private JPanel createImagePanel()

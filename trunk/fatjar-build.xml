@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<project name="FatJar LJColligo-0.8.jar (experimental)" default="main" basedir=".">
+<project name="FatJar LJColligo" default="main" basedir=".">
     <!-- this file was created by Fat-Jar Eclipse Plug-in -->
     <!-- the ANT-Export is in a very early stage, so this -->
     <!-- is only experimental, ANT 1.6 or above is        -->
@@ -19,7 +19,7 @@
     <!-- uncomment the above lines to use ANT outside of Eclipse -->
 
     <property name="dist" value="dist"/>
-    <property name="ljcolligo.jar" value="${dist}/LJColligo-0.8.jar"/>
+    <property name="ljcolligo.jar" value="${dist}/LJColligo-0.8.1.jar"/>
 
     <target name="main">
         <mkdir dir="${dist}"/>

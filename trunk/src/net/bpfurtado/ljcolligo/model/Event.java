@@ -91,6 +91,11 @@ public class Event implements Serializable
         return comments;
     }
 
+    public int getCommentsSize()
+    {
+        return comments.size();
+    }
+
     public void setId(Integer id)
     {
         this.id = id;

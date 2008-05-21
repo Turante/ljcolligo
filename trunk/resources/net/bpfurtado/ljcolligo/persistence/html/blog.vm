@@ -36,29 +36,37 @@
     </div>
     <div class="events">
         #foreach($ev in $events)
-        <div class="event">
-            <div class="header">
-                <div class="subject">$ev.subject</div>
-                <div class="date">$sdf.format($ev.date)</div>
-            </div>
-            <div class="body">
-                $ev.body
-            </div>
-            <div class="eventFooter">
-                #if(!$ev.metadata.tags.empty)
-                    <div class="tags">
-                        Tags:&nbsp;&nbsp;
-                        #foreach($tag in $ev.metadata.tags)
-                            #set($link = "${blogURL}/tag/${tag}")
-                            <a href="$link">$tag</a>&nbsp;
+            <div class="event">
+                <div class="header">
+                    <div class="subject">$ev.subject</div>
+                    <div class="date">$sdf.format($ev.date)</div>
+                </div>
+                <div class="body">
+                    $ev.body
+                </div>
+                <div class="eventFooter">
+                    #if(!$ev.metadata.tags.empty)
+                        <div class="tags">
+                            Tags:&nbsp;&nbsp;
+                            #foreach($tag in $ev.metadata.tags)
+                                #set($link = "${blogURL}/tag/${tag}")
+                                <a href="$link">$tag</a>&nbsp;
+                            #end
+                        </div>
+                    #end
+                    #set($link = "<a href='${ev.url}?mode=reply'>Leave a comment</a>")
+                    #set($ahref= "<a href='post${ev.id}.html'>")
+                    <div class="leaveAComment"> 
+                        #if($ev.commentsSize == 1)
+                            (1 $ahref comment </a> | $link)
+                        #elseif($ev.commentsSize > 1)    
+                            ($ev.commentsSize $ahref comments </a> | $link)
+                        #else
+                            ($link)
                         #end
                     </div>
-                #end
-                <div class="leaveAComment">
-                    (<a href="$ev.url?mode=reply">Leave a comment</a>)
                 </div>
             </div>
-        </div>
         #end
     </div>
     <div class="footer">

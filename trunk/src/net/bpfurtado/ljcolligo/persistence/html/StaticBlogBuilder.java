@@ -50,10 +50,11 @@ import org.apache.velocity.app.Velocity;
  */
 public class StaticBlogBuilder
 {
+    @SuppressWarnings("unused")
     private static final Logger logger = Logger.getLogger(StaticBlogBuilder.class);
 
+    private static final SimpleDateFormat SDF = new SimpleDateFormat("MMM. dd, yyyy @ hh:mm a");
     private static final String RES_HOME = "/net/bpfurtado/ljcolligo/persistence/html/";
-
     private static final Conf conf = Conf.getInstance();
 
     private Template blogTemplate = null;
@@ -100,29 +101,29 @@ public class StaticBlogBuilder
             i++;
         }
 
+        createCommentsPage(events);
+
         copyResourcesTo(outputPath);
 
         return new File(outputPath + File.separator + pageLink(0));
     }
 
-    private static void copyResourcesTo(File outputPath)
+    private void createCommentsPage(List<Event> events)
     {
-        copy("blog.css", outputPath);
-        copy("back.png", outputPath);
-        copy("forward.png", outputPath);
-    }
-
-    private static void copy(String fileName, File outputPath)
-    {
-        InputStream in = StaticBlogBuilder.class.getResourceAsStream(RES_HOME + fileName);
         try {
-            FileOutputStream o = new FileOutputStream(new File(outputPath + File.separator + fileName));
-            byte data[] = new byte[in.available()];
-            in.read(data);
-            o.write(data);
-            o.flush();
-            o.close();
-            in.close();
+            Template postTemplate = Velocity.getTemplate(RES_HOME + "post.vm");
+            VelocityContext ctx = createVelocityContext(events);
+            ctx.put("sdf", SDF);
+            for (Event e : events) {
+                if (e.getCommentsSize() > 0) {
+                    StringWriter singlePostHtml = new StringWriter();
+
+                    ctx.put("ev", e);
+                    postTemplate.merge(ctx, singlePostHtml);
+
+                    persist("post" + e.getId(), singlePostHtml);
+                }
+            }
         } catch (Exception e) {
             throw new LJColligoException(e);
         }
@@ -145,9 +146,7 @@ public class StaticBlogBuilder
             StringWriter html = new StringWriter();
             blogTemplate.merge(ctx, html);
 
-            persist(html, pageNumber);
-
-            logger.debug(html);
+            persist("blog" + pageNumber, html);
         } catch (Exception e) {
             throw new LJColligoException(e);
         }
@@ -158,9 +157,9 @@ public class StaticBlogBuilder
         return "blog" + page + ".html";
     }
 
-    private void persist(StringWriter sw, int page) throws IOException
+    private void persist(String name, StringWriter sw) throws IOException
     {
-        FileWriter writer = new FileWriter(outputPath.getAbsolutePath() + File.separator + "blog" + page + ".html");
+        FileWriter writer = new FileWriter(outputPath.getAbsolutePath() + File.separator + name + ".html");
         writer.write(sw.toString());
         writer.flush();
         writer.close();
@@ -174,7 +173,7 @@ public class StaticBlogBuilder
             String url = events.get(0).getUrl().toString();
             context.put("blogName", url.substring(url.indexOf('/') + 2, url.indexOf('.')));
 
-            context.put("sdf", new SimpleDateFormat("MMM. dd, yyyy @ hh:mm a"));
+            context.put("sdf", SDF);
 
             return context;
         } catch (Exception e) {
@@ -202,5 +201,29 @@ public class StaticBlogBuilder
         ps.setProperty("class.resource.loader.class", "org.apache.velocity.runtime.resource.loader.ClasspathResourceLoader");
 
         Velocity.init(ps);
+    }
+
+    private static void copyResourcesTo(File outputPath)
+    {
+        copy("blog.css", outputPath);
+        //copy("post.css", outputPath);
+        copy("back.png", outputPath);
+        copy("forward.png", outputPath);
+    }
+
+    private static void copy(String fileName, File outputPath)
+    {
+        InputStream in = StaticBlogBuilder.class.getResourceAsStream(RES_HOME + fileName);
+        try {
+            FileOutputStream o = new FileOutputStream(new File(outputPath + File.separator + fileName));
+            byte data[] = new byte[in.available()];
+            in.read(data);
+            o.write(data);
+            o.flush();
+            o.close();
+            in.close();
+        } catch (Exception e) {
+            throw new LJColligoException(e);
+        }
     }
 }

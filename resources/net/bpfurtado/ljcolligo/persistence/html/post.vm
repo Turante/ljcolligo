@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title>
+            Static Blog Backup - LJColligo - A LiveJournal Backup Tool
+        </title>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <link rel="stylesheet" title="Blog Main Style" href="blog.css" media="screen" type="text/css" />
+        <link rel="stylesheet" title="Blog Main Style" href="post.css" media="screen" type="text/css" />
+        <style type="text/css">
+        /*<![CDATA[*/
+        /*]]>*/
+        </style>
+    </head>
+    <body>
+    #set($blogURL = "http://${blogName}.livejournal.com")
+    <h1><a href="$blogURL" title="On line Blog">$blogName</a></h1>
+    <a name="top"></a>
+    <div class="control">
+        Powered by <a href="http://code.google.com/p/ljcolligo">LJColligo</a>.<br/>
+        <br/>
+        Syndicate:<br/>
+        <a href="http://${blogName}.livejournal.com/data/rss">
+            <img src="http://p-stat.livejournal.com/img/data_rss.gif" alt="RSS">
+        </a>
+        <a href="http://${blogName}.livejournal.com/data/atom">
+            <img src="http://p-stat.livejournal.com/img/data_atom.gif" alt="Atom">
+        </a>
+    </div>
+    <div class="events">
+        <div class="event">
+            <div class="header">
+                <div class="subject">$ev.subject</div>
+                <div class="date">$sdf.format($ev.date)</div>
+            </div>
+            <div class="body">
+                $ev.body
+            </div>
+            <div class="eventFooter">
+                #if(!$ev.metadata.tags.empty)
+                    <div class="tags">
+                        Tags:&nbsp;&nbsp;
+                        #foreach($tag in $ev.metadata.tags)
+                            #set($link = "${blogURL}/tag/${tag}")
+                            <a href="$link">$tag</a>&nbsp;
+                        #end
+                    </div>
+                #end
+                <div class="leaveAComment">
+                    (<a href="$ev.url?mode=reply">Leave a comment</a>)
+                </div>
+            </div>
+        </div>
+        <p>
+            #if($ev.commentsSize == 1)
+                1 comment.
+            #else
+                $ev.commentsSize comments.
+            #end
+        </p>
+        #foreach($co in $ev.comments)
+            #if($co.body)
+                <div class="comment">
+                    #if($co.date)
+                    <div class="commentHeader">
+                        #if($co.subject)
+                            $co.subject
+                        #end    
+                        $sdf.format($co.date)
+                    </div>
+                    #end
+                    <div class="commentBody">$co.body</div>
+                </div>
+            #end
+        #end
+    </div>
+    <div class="footer">
+        <a href="#top">Top of Page</a>
+        <a href="http://www.spreadfirefox.com/node&amp;id=0&amp;t=222">
+            <img border="0" alt="Firefox 2 - Download Now!" 
+                 title="Firefox 2 - Download Now!" 
+                 src="http://sfx-images.mozilla.org/affiliates/Buttons/firefox2/foxkeh-fx2-180x60.png" />
+        </a>
+    </div>
+</body>
+</html>

@@ -22,9 +22,12 @@
 
 package net.bpfurtado.ljcolligo.gui;
 
+import java.awt.Dimension;
 import java.awt.Window;
 
+import javax.swing.Box;
 import javax.swing.ImageIcon;
+import javax.swing.JPanel;
 
 import net.bpfurtado.ljcolligo.LJColligoException;
 
@@ -45,5 +48,15 @@ public class Util
         int y = window.getY() + (window.getHeight() - height) / 2;
 
         w.setBounds(x, y, width, height);
+    }
+
+    public static void addWidth(JPanel panel, int width)
+    {
+        panel.add(Box.createRigidArea(new Dimension(width, 0)));
+    }
+
+    public static void addHeight(JPanel panel, int height)
+    {
+        panel.add(Box.createRigidArea(new Dimension(0, height)));
     }
 }

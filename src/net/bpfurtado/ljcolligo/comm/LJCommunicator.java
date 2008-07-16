@@ -66,7 +66,7 @@ public class LJCommunicator extends LJColligoObservable
 		}
 	}
 
-	public void updateChallenge(String password, Map params)
+	public void updateChallenge(String password, Map<String, String> params)
 	{
 		String challenge = requestChallenge();
 		params.put("auth_challenge", challenge);
@@ -77,7 +77,7 @@ public class LJCommunicator extends LJColligoObservable
 	{
 		try {
 
-			Map<String, Object> challengeResponse = (Map) xmlRPCClient.execute("LJ.XMLRPC.getchallenge", new Object[] {});
+			Map<String, Object> challengeResponse = (Map<String, Object>) xmlRPCClient.execute("LJ.XMLRPC.getchallenge", new Object[] {});
 			return (String) challengeResponse.get("challenge");
 		} catch (XmlRpcException e) {
 			throw new LJColligoException(e);

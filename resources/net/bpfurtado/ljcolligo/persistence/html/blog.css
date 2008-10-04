@@ -71,13 +71,17 @@ body {
     padding-left: .3em;
     padding-right: .3em;
     float:left;
+    width: 95%;
+    /*border: yellow thick solid;*/
 }
 
 .subject {
     float: left;
+    /*border: blue thick solid;*/
 }
 
 .date {
+    /*border: red thick solid;*/
     float: right;
 }
 

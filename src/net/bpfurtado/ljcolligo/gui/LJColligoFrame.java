@@ -255,8 +255,7 @@ public class LJColligoFrame extends JFrame implements LJColligoListener, Downloa
             {
                 chooser.setCurrentDirectory(new File(outputDirTf.getText()));
 
-                int returnVal = chooser.showOpenDialog(LJColligoFrame.this);
-                if (returnVal == JFileChooser.APPROVE_OPTION) {
+                if (chooser.showOpenDialog(LJColligoFrame.this) == JFileChooser.APPROVE_OPTION) {
                     outputDirTf.setText(chooser.getSelectedFile().getAbsolutePath());
                 }
             }

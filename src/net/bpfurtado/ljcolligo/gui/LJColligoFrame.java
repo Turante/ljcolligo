@@ -79,13 +79,15 @@ import com.jgoodies.forms.layout.FormLayout;
 
 public class LJColligoFrame extends JFrame implements LJColligoListener, DownloadInBackgroundClient
 {
-    private static final Logger logger = Logger.getLogger(LJColligoFrame.class);
-
     private static final long serialVersionUID = -1664443660071340253L;
+    
+    private static final Logger logger = Logger.getLogger(LJColligoFrame.class);
 
     private static final Font FONT = new Font("Tahoma", Font.PLAIN, 14);
     private static final Font TA_FONT = new Font("Tahoma", Font.PLAIN, 12);
     private static final Font DOWNLOAD_BT_FONT = new Font("Tahoma", Font.BOLD, 14);
+    
+    private final Conf conf = Conf.getInstance();
 
     private LJColligo ljcolligo = new LJColligo();
     private JFileChooser chooser = new JFileChooser();
@@ -186,10 +188,7 @@ public class LJColligoFrame extends JFrame implements LJColligoListener, Downloa
         builder.add(outputDirTf, cc.xyw(3, 5, 4));
         builder.add(chooseOutputDirBt, cc.xy(8, 5));
 
-        JButton b = new JButton("One click, to download them all!");
-        b.setPreferredSize(new Dimension(0, 40));
-        b.setFont(DOWNLOAD_BT_FONT);
-        builder.add(downloadBt, cc.xyw(1, 7, 8));
+        builder.add(downloadBt, cc.xyw(1, 7, 8));//111
 
         builder.add(new JScrollPane(outputTA), cc.xyw(1, 9, 8));
 
@@ -240,7 +239,12 @@ public class LJColligoFrame extends JFrame implements LJColligoListener, Downloa
         addEnterEvent(passwordTf);
         passwordTf.setFont(FONT);
 
-        outputDirTf.setText(System.getProperty("user.home"));
+        String lastFolder = conf.get(Conf.LAST_FOLDER);
+        if (lastFolder == null)
+            outputDirTf.setText(System.getProperty("user.home"));
+        else {
+            outputDirTf.setText(lastFolder);
+        }
         addEnterEvent(outputDirTf);
 
         this.chooseOutputDirBt = new JButton("Choose...");
@@ -384,6 +388,8 @@ public class LJColligoFrame extends JFrame implements LJColligoListener, Downloa
 
     private void downloadEntriesAction()
     {
+        conf.set(Conf.LAST_FOLDER, outputDirTf.getText());
+        
         enabler.setEnable(false);
         downloadEvents(userNameTf.getText(), new String(passwordTf.getPassword()));
     }
@@ -402,12 +408,12 @@ public class LJColligoFrame extends JFrame implements LJColligoListener, Downloa
         openBt.setEnabled(true);
         this.generatedOutputFile = outputFile;
         try {
-            Conf c = Conf.getInstance();
-            c.setUserName(userNameTf.getText().trim());
+            
+            conf.setUserName(userNameTf.getText().trim());
             Document d = passwordTf.getDocument();
             String pw = d.getText(0, d.getLength()).trim();
-            c.setPassword(pw);
-            c.save();
+            conf.setPassword(pw);
+            conf.save();
             openBt.requestFocusInWindow();
         } catch (BadLocationException e) {
             throw new LJColligoException(e);

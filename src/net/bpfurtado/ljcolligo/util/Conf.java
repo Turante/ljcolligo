@@ -51,6 +51,8 @@ public class Conf
     private Properties properties;
     private File file;
 
+    public static final String LAST_FOLDER = "lastFolder";
+
     private Conf()
     {
         try {

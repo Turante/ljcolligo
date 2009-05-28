@@ -188,7 +188,7 @@ public class LJColligoFrame extends JFrame implements LJColligoListener, Downloa
         builder.add(outputDirTf, cc.xyw(3, 5, 4));
         builder.add(chooseOutputDirBt, cc.xy(8, 5));
 
-        builder.add(downloadBt, cc.xyw(1, 7, 8));//111
+        builder.add(downloadBt, cc.xyw(1, 7, 8));
 
         builder.add(new JScrollPane(outputTA), cc.xyw(1, 9, 8));
 
@@ -385,12 +385,29 @@ public class LJColligoFrame extends JFrame implements LJColligoListener, Downloa
         return l;
     }
 
-    private void downloadEntriesAction()
+    private void downloadEntriesAction() 
     {
-        conf.set(Conf.LAST_FOLDER, outputDirTf.getText());
+        String folderStr = outputDirTf.getText();
+        File folder = new File(folderStr);
         
+        String title = "Invalid output folder";
+        if (!folder.exists()) {
+            warn("The folder [" + folderStr + "] does not exist!", title);
+            return;
+        } else if (!folder.isDirectory()) {
+            warn("[" + folderStr + "] is not a folder !", title);
+            return;
+        }
+
+        conf.set(Conf.LAST_FOLDER, folderStr);
+
         enabler.setEnable(false);
         downloadEvents(userNameTf.getText(), new String(passwordTf.getPassword()));
+    }
+
+    private void warn(String message, String title) 
+    {
+        JOptionPane.showMessageDialog(this, message, title, JOptionPane.WARNING_MESSAGE);
     }
 
     @Override
